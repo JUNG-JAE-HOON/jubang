@@ -1,0 +1,69 @@
+// iphone5
+@media all and (max-device-width : 320px) {
+  *{
+    font-size: 12px !important;
+  }
+/* 스크린 너비가 최소 320px 이상 '그리고' 480px이하이면 실행  */
+    .center-text{
+      width:40% !important;
+    }
+    .member{
+      .basic-wrap1{
+        padding:0 0 0 0;
+        .singup-check-wrap{
+          .circle-check{
+            .right-arrow{
+            }
+            .list{
+              .item{
+                font-size: 10px;
+                .checkbox-icon{
+                  margin: .8em 0 0 -.8em;
+                }
+              }
+            }
+          }
+        }
+        .next-btn{
+          margin-top: 6em;
+        }
+      }
+    }
+
+    // .platform-ios.platform-cordova{
+    //
+    // }
+    .default-input1{
+       input{
+         font-size: 12px !important
+       }
+    }
+    .basic-input-wrap{
+      .basic-input-form{
+        .overlap{
+          font-size:12px;
+        }
+      }
+    }
+    .default-btn2{
+
+    }
+}
+.platform-ios.platform-cordova {
+  .main-two-btn{
+    img{
+      margin-top: -5%;
+    }
+  }
+  .main .two-btn {
+    .main .two-btn .left {
+      .main .two-btn .left .two-img {
+        .main .two-btn .left .two-img img {
+          width: 100%;
+          margin-top: -2em;
+          margin-left: -1em;
+       }
+     }
+   }
+ }
+}

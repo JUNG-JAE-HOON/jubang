@@ -1,0 +1,111 @@
+<div class="main-card-list main-card-list1">
+  <div class="title1">
+    <h4 class="left">동영상</h4>
+    <p class="right">더보기 ></p>
+  </div>
+  <div class="list card-wrap">
+    <!-- 카드 -->
+    <div class="thumnail-card" ng-repeat="churchVideoItem in churchVideoItems" item="churchVideoItems">
+      <a class="item item-card" href="#" ng-controller="refCtrl" >
+        <div>
+          <!-- <img src="http://www.placehold.it/100x70" width="100%"> -->
+          <iframe width="100%" height="" ng-src="{{churchVideoItem.videoPath}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="cardContWrap">
+          <h3 class="cardTitle">{{churchVideoItem.event_nm}}</h3>
+          <div class="floatStar" id="churchVideo{{$index}}"></div>
+          <p class="cardTxt">{{churchVideoItem.content}}</p>
+        </div>
+      </a>
+    </div>
+     <!-- 카드-->
+     <!-- 카드 -->
+     <!--
+     <div class="thumnail-card">
+       <a class="item item-card" href="#" ng-controller="refCtrl">
+         <div>
+           <img src="http://www.placehold.it/100x70" width="100%">
+         </div>
+         <div class="cardContWrap">
+           <h3 class="cardTitle">{{carTitle}}</h3>
+           <div class="rateYo"></div>
+           <p class="cardTxt">{{cardTxt}}</p>
+         </div>
+       </a>
+     </div>
+   -->
+      <!-- 카드-->
+      <!-- 카드-->
+  </div>
+</div>
+<div class="main-card-list main-card-list2">
+  <div class="title1">
+    <h4 class="left">사진</h4>
+    <p class="right">더보기 ></p>
+  </div>
+  <div class="list card-wrap">
+    <!-- 카드 -->
+    <div class="thumnail-card" ng-repeat="churchPhotoItem in churchPhotoItems" item="churchPhotoItems">
+      <a class="item item-card" href="#" ng-controller="refCtrl">
+        <div>
+          <img src="http://il-bang.com/jubang_ajax/imageGuin/{{churchPhotoItem.server_photo_name}}" width="100%">
+        </div>
+        <div class="cardContWrap">
+          <h3 class="cardTitle">{{churchPhotoItem.event_nm}}</h3>
+          <div class="floatStar" id="churchPhoto{{$index}}"></div>
+          <p class="cardTxt">{{churchPhotoItem.content}}</p>
+        </div>
+      </a>
+    </div>
+     <!-- 카드-->
+     <!-- 카드 -->
+     <!--
+     <div class="thumnail-card">
+       <a class="item item-card" href="#" ng-controller="refCtrl">
+         <div>
+           <img src="http://www.placehold.it/100x70" width="100%">
+         </div>
+         <div class="cardContWrap">
+           <h3 class="cardTitle">{{carTitle}}</h3>
+           <div class="rateYo"></div>
+           <p class="cardTxt">{{cardTxt}}</p>
+         </div>
+       </a>
+     </div>
+      -->
+      <!-- 카드-->
+  </div>
+</div>
+<div class="main-thumbnail-list">
+  <div class="title1">
+    <h4 class="left">글</h4>
+    <p class="right">더보기 ></p>
+  </div>
+  <div>
+    <!-- 리뷰 리스트 -->
+    <div class="item item-avatar item-review-thumb" href="#" ng-controller="refCtrl" ng-repeat="churchWritingItem in churchWritingItems" item="churchWritingItems">
+      <h3 class="thumb-title">{{churchWritingItem.event_nm}}</h3>
+      <div class="floatStar" id="churchWriting{{$index}}"> </div>
+      <p>{{churchWritingItem.content}}</p>
+    </div>
+    <!-- 리뷰 리스트 -->
+    <!-- 리뷰 리스트 -->
+    <!--
+    <div class="item item-avatar item-review-thumb" href="#" ng-controller="refCtrl">
+      <h3 class="thumb-title">[순복음교회]주님사랑</h3>
+      <div class="rateYo"> </div>
+      <p>2017 - 03 - 24 5분전</p>
+    </div>
+    -->
+    <!-- 리뷰 리스트 -->
+  </div>
+</div>
+<div class="main-snsBar">
+  <sns-bar></sns-bar>
+</div>
+<div class="">
+  <img src="img/main-bot-ban.png" alt="" width="100%">
+</div>
+<div class="main-footer">
+  <footer></footer>
+</div>

@@ -1,0 +1,70 @@
+<ion-side-menus enable-menu-with-back-views="false" cache-view="false">
+    <ion-side-menu-content>
+        <!-- <ion-nav-bar class="jubang-nav-bar" align-title="center"> -->
+            <!-- <ion-nav-buttons side="left" class="left-btn">
+                <button class="button button-icon button-clear ion-navicon"></button>
+            </ion-nav-buttons> -->
+            <!-- <ion-nav-buttons side="left">
+                <a class="btn button-clear custom-back-button left-btn" ng-click="backBtn()">
+                      <i class="ion-chevron-left"></i>
+                </a>
+            </ion-nav-buttons> -->
+            <!-- <ion-nav-buttons side="right">
+                <a class="btn" ui-sref="message">
+                    <img src="img/bell.png" width="70%;" style="margin-top:.3em;" />
+                </a>
+            </ion-nav-buttons>
+        </ion-nav-bar> -->
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" ng-controller="sideMenuCtrl">
+        <ion-header-bar class="jubang-header-bar">
+            <div class="side-head-wrap">
+                <ul class="side-head" ng-show="id == null">
+                    <li class="side-head-inner" ui-sref="login">로그인</li>
+                    <li class="side-head-inner">|</li>
+                    <li class="side-head-inner" ui-sref="memKind">회원가입</li>
+                </ul>
+                <ul class="side-head" ng-show="id != null">
+                    <li class="side-head-inner" ng-click="logout()">로그아웃</li>
+                </ul>
+                <i class="icon ion-close" menu-toggle></i>
+            </div>
+        </ion-header-bar>
+        <ion-content class="side-menu">
+            <div class="side-mem-info no-mem" ui-sref="login" ng-show="id == null">로그인 해주시기 바랍니다.</div>
+            <div class="side-mem-info" ng-show="id != null">
+                <img class="mem-thumbnail" ng-src="{{ profilePath }}" />
+                <div class="side-id">{{ id }}</div>
+                <button class="button icon ion-gear-a side-mem-gear" ui-sref="modifyPage"></button>
+            </div>
+            <div class="side-btn">
+                <div class="two-btn">
+                    <div class="left" ng-click="kindCheck('church')">
+                        <div class="two-img">
+                            <img src="img/panel1.png" />
+                        </div>
+                        <div class="two-title">교회 등록</div>
+                    </div>
+                    <div class="right" ng-click="kindCheck('ministry')">
+                        <div class="two-img">
+                            <img src="img/panel2.png" />
+                        </div>
+                        <div class="two-title">사역자 등록</div>
+                    </div>
+                </div>
+            </div>
+            <ion-list class="side-list panel-menus">
+                <ion-item class="panel-menu1" ui-sref="notice" menu-toggle><img src="img/panel/notice.png" width="13%" />공지사항</ion-item>
+                <ion-item class="panel-menu2" ui-sref="jubangIntro" menu-toggle><img src="img/panel/cost-info.png" width="13%" />주방 이용 및 요금 안내</ion-item>
+                <ion-item class="panel-menu3" ui-sref="itemShop" menu-toggle><img src="img/panel/sns.png" width="10%" />아이템샵</ion-item>
+                <ion-item class="panel-menu4" ui-sref="app.emergency" menu-toggle><img src="img/panel/emergency.png" width="8%" />긴급 구인</ion-item>
+                <ion-item class="panel-menu5" ui-sref="cs" menu-toggle><img src="img/panel/cs.png" width="11%" />고객센터</ion-item>
+            </ion-list>
+            <div class="side-sns-wrap">
+              <span class="send-link">설치하기 링크 공유하기</span>
+              <sns-bar></sns-bar>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,14 @@
+<ion-popover-view>
+    <ion-header-bar align-title="left" class="pop-nav-bar">
+        <div class="buttons" ng-click="closePopover()">
+            <i class="ion-arrow-left-c"></i>
+        </div>
+        <h1 class="title">{{ content }}</h1>
+        <div class="buttons">
+            <img src="img/wasteBasket.png" ng-click="messageDelete(no)" />
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        {{ content }}
+    </ion-content>
+</ion-popover-view>

@@ -1,0 +1,20 @@
+<div class="slide-wrap">
+  <ion-slide-box on-slide-changed="slideHasChanged($index)" ng-repeat="slideImg in slideImgs">
+    <ion-slide>
+      <div class="box blue">
+        <img src="img/{{slideImg.img1}}" alt="" width="100%">
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box yellow">
+        <img src="img/{{slideImg.img2}}" alt="" width="100%">
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box pink">
+        <img src="img/{{slideImg.img3}}" alt="" width="100%">
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+
+</div>

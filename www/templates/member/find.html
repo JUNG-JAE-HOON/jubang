@@ -1,0 +1,35 @@
+<ion-view view-title="{{ title }} 찾기" ng-controller="findCtrl">
+    <ion-content class="member">
+        <div class="general">
+            <div class="input-padding">
+                <div class="list" ng-show="find.type == 'pwd'">
+                    <label class="item item-input item-floating-label default-input1">
+                        <input type="text" ng-model="find.id" placeholder="아이디를 입력해주세요." />
+                    </label>
+                </div>
+                <div class="list">
+                    <label class="item item-input item-floating-label default-input1">
+                        <input type="text" ng-model="find.name" placeholder="이름을 입력해주세요." />
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="list phone-form">
+            <label class="item item-input">
+                <input type="text" ng-model="find.phone1" maxlength="3" pattern="[0-9]*" />
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="find.phone2" maxlength="4" pattern="[0-9]*" />
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="find.phone3" maxlength="4" pattern="[0-9]*" />
+            </label>
+        </div>
+        <span class="coment">* 회원가입 당시에 입력한 정보를 입력해주세요.</span>
+        <div class="find-id-btn">
+            <div class="padding">
+                <button class="button button-block button-positive" ng-click="infoFind()">{{ title }} 찾기</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

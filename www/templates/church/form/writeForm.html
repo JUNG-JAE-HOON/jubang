@@ -1,0 +1,105 @@
+<ion-view view-title="교회 등록서 작성" cache-view="false">
+    <ion-content ng-controller="churchWriteCtrl" class="has-header padding-wrap write-form-wrap">
+        <div class="church-write-input">
+            <div class="input-padding">
+                <div class="list" style="overflow: hidden;">
+                    <label class="item item-floating-label default-input1" style="float: left; width: 40%;">교단 이름</label>
+                    <label class="item item-floating-label default-input1" style="float: left; width: 61%;">{{ order }}</label>
+                </div>
+                <div class="list" style="overflow: hidden;">
+                    <label class="item item-floating-label default-input1" style="float: left; width: 40%;">교회 이름</label>
+                    <label class="item item-floating-label default-input1" style="float: left; width: 61%;">{{ church }}</label>
+                </div>
+                <div class="list" style="overflow: hidden;">
+                    <label class="item item-floating-label default-input1" style="float: left; width: 40%;">담임 목사 이름</label>
+                    <label class="item item-floating-label default-input1" style="float: left; width: 61%;">{{ ministry }}</label>
+                </div>
+            </div>
+            <div>교단, 교회, 담임 목사는 <a ui-sref="modifyPage">개인 정보 수정</a>에서 수정해주세요.</div>
+        </div>
+        <div class="title1">
+            <h4 class="left">위치</h4>
+        </div>
+        <div class="list select-form select-local">
+            <label class="item item-select">
+                <select ng-change="getArea2ndList()" ng-model="churchForm.area_1st_no" ng-options="o.no as o.list_name for o in selboxData.area_1st"></select>
+            </label>
+            <label class="item item-select select-local">
+                <select ng-model="churchForm.area_2nd_no" ng-options="o.no as o.list_name for o in selboxData.area_2nd"></select>
+            </label>
+        </div>
+        <div class="input-padding">
+            <div class="list">
+                <label class="item item-input item-floating-label default-input1">
+                    <input type="text" ng-model="churchForm.address" placeholder="상세주소를 입력해주세요." />
+                </label>
+            </div>
+        </div>
+        <div class="title1">
+            <h4 class="left">행사 정보 입력하기</h4>
+        </div>
+        <div class="list">
+            <label class="item item-input item-floating-label default-input1">
+                <input type="text" ng-model="churchForm.event_nm" placeholder="행사명을 입력해주세요." />
+            </label>
+        </div>
+        <div class="list select-form select-date">
+            <label class="item item-select">
+                <select ng-model="churchForm.start_date" ng-options="data as data for data in selboxData.start_date"></select>
+            </label>
+            <label class="wave"> ~ </label>
+            <label class="item item-select select-local">
+                <select ng-model="churchForm.end_date" ng-options="data as data for data in selboxData.end_date"></select>
+            </label>
+        </div>
+        <div class="title1">
+            <h4 class="left">행사 시간</h4>
+        </div>
+        <div class="list select-form select-date">
+            <label class="item item-select">
+                <select ng-model="churchForm.start_time" ng-options="data as data for data in selboxData.start_time"></select>
+            </label>
+            <label class="wave"> ~ </label>
+            <label class="item item-select select-local">
+                <select ng-model="churchForm.end_time" ng-options="data as data for data in selboxData.end_time"></select>
+            </label>
+        </div>
+        <div class="title1">
+            <h4 class="left">금액</h4>
+        </div>
+        <div class="list">
+            <label class="item item-input item-floating-label default-input1">
+                <input type="text" ng-model="churchForm.pay" placeholder="금액을 입력해주세요." />
+            </label>
+        </div>
+        <div class="title1">
+            <h4 class="left">동영상</h4>
+        </div>
+        <div class="list">
+            <label class="item item-input item-floating-label default-input1">
+                <input type="text" ng-model="churchForm.video_url" placeholder="동영상 URL 링크를 입력해주세요." />
+            </label>
+        </div>
+        <div class="title1">
+            <h4 class="left">사진 첨부</h4>
+        </div>
+        <div class="list thumbnail">
+            <img class="add-img" src="http://il-bang.com/jubang_ajax/imageGuin/{{ image }}" width="32.4%" ng-repeat="image in churchForm.imageList" />
+            <span class="add-photo" ng-click="getPicture()">
+                <img src="img/plus.png" alt="" width="40%">
+            </span>
+        </div>
+        <div class="text-area">
+            <textarea rows="8" ng-model="churchForm.content" placeholder="내용을 입력해주세요." style="border: 1px solid #ddd; width: 100%;"></textarea>
+        </div>
+        <li class="item item-checkbox">
+         '교회 자동매칭1회 이용권'을 이용합니다.
+         <label class="checkbox">
+         <input type="checkbox" ng-model="churchForm.TMPmatchingOneYn" ng-change="changeMatchingOneYn()">
+         </label>
+       </li>
+        <div class="padding submit-btn-wrap">
+            <button ng-click="insertForm()" class="button button-block button-positive" >교회 정보 작성 완료</button>
+        </div>
+    </ion-content>
+</ion-view>

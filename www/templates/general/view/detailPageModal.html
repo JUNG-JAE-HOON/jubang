@@ -1,0 +1,86 @@
+<ion-modal-view view-title="찬양하기(교인)정보" cache-view="false">
+  <ion-nav-bar class="jubang-nav-bar" align-title="center">
+      <!-- <ion-nav-buttons side="left" class="left-btn">
+          <button class="button button-icon button-clear ion-navicon"></button>
+      </ion-nav-buttons> -->
+      <ion-nav-buttons side="left">
+          <a class="btn button-clear custom-back-button left-btn" ng-click="closeModal()">
+                <i class="ion-chevron-left"></i>
+          </a>
+      </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content  class="detail-back modal-wrap" cache-view="false">
+    <div class="video-wrap">
+      <iframe width="100%" height="220" ng-src="{{ videoPath }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="detail-cont">
+        <div class="title1">
+            <h4 class="left">이미지</h4>
+        </div>
+        <div class="detail-slide-wrap">
+            <div class="thumbnail-list" id="imageList"></div>
+        </div>
+    </div>
+    <div class="list detail-cont">
+      <a class="item item-thumbnail-left item-thumb-wrap">
+        <img class="circle" src="{{profile}}">
+        <div class="thumblist-date">
+          <span class="date">{{date}}</span>
+          <div class="rateYo" id="rateYoTest"></div>
+        </div>
+        <p class="thumblist-title">{{title}}</p>
+        <div class="thumbnailist-cont">
+          {{content}}
+        </div>
+      </a>
+    </div>
+    <div class="detail-cont">
+      <div class="title1">
+        <h4 class="left">상세정보</h4>
+      </div>
+      <detail-info1></detail-info1>
+    </div>
+    <div class="detail-cont">
+      <div class="title1">
+          <h4 class="left">평가하기</h4>
+      </div>
+      <div class="give-star">
+          <div class="rateYo-give-star" id="resumeRateYoBig"></div>
+          <div class="submit" ng-click="giveStar(no)">점수주기</div>
+      </div>
+    </div>
+    <div class="detail-cont">
+      <form class="detail-form" action="" >
+        <div class="detail-review-input">
+          <div class="input-padding">
+            <div class="list">
+              <label class="item item-input item-floating-label default-input1">
+                <!-- <span class="input-label">뭐임</span> -->
+                <input type="text" id="reviewInput" placeholder="덧글을 입력해주세용">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="detail-review-btn">
+          <div class="btn-wrap">
+            <button class="button button-positive" ng-click="resumeReviewAdd()">
+              등록
+            </button>
+          </div>
+        </div>
+      </form>
+      <review-list2></review-list2>
+      <div class="more" ng-if="commentMoreView==true" ng-click="moreResumeReview()">
+        <span>댓글 더보기</span>
+      </div>
+    </div>
+    <div class="detail-cont">
+      <sns-bar></sns-bar>
+      <div class="banner">
+        <img src="img/main-bot-ban.png" alt="" width="100%">
+      </div>
+      <footer></footer>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

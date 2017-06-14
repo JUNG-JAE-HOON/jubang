@@ -1,0 +1,19 @@
+<ion-view view-title="회원가입">
+    <ion-content class="member has-header" ng-controller="memKindCtrl">
+        <h5 class="memkind-title">회원가입을 환영합니다!</h5>
+        <div class="mem-kind-wrap">
+            <div class="mem-kind-general">
+                <div class="general-txt">
+                    <img src="img/signupThumb1.png"><span class="title">찬양하러가기</span><br/><span class="sub-title">교회를 찾으시는 분</span>
+                </div>
+                <default-btn1 ui-sref="stepGeneral({ kind: 'ministry' })" ng-repeat="button in button1"></defult-btn1>
+            </div>
+            <div class="mem-kind-company">
+                <div class="company-txt">
+                    <img src="img/signupThumb2.png"><span class="title">찬양 사역자 찾기</span><br/><span class="sub-title">사람을 찾으시는 분</span>
+                </div>
+                <default-btn2 ui-sref="stepChurch({ kind: 'church' })" ng-repeat="button in button2"></defult-btn2>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

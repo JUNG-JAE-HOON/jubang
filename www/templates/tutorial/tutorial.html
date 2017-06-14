@@ -1,0 +1,28 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="tutorial" ng-controller="tutoCtrl">
+      <div class="slide-wrap">
+        <ion-slide-box on-slide-changed="slideHasChanged($index)">
+          <ion-slide>
+            <div class="box blue">
+              <div>
+                <img src="{{img1}}" alt="" width="100%">
+              </div>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="box yellow">
+              <img src="{{img2}}" alt="" width="100%">
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="box pink">
+              <div class="service-start-btn">
+                <img src="{{img3}}" alt="" width="100%">
+                <default-btn1 class="start-btn" ui-sref="memKind" ng-repeat="button in button1"></default-btn1>
+              </div>
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+  </ion-content>
+</ion-view>

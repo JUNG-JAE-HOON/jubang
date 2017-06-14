@@ -1,0 +1,4 @@
+angular.module('starter.controllers', ['cs-controller','ref-controller','slide-controller','side-main-controller','side-menu-controller','tutorial-controller','memKind-controller','signUp-controller','fab-controller','ng-mfb','churchRegi-controller','church-write','snsShare','genTab-controller','login','generalDetail-controller', 'findController','churchTab-controller','messagePop-controller','generalRegi-controller','general-write', 'modify-controller', 'matchingChurch-controller' , 'churchDetail-controller','inApp', 'church-modify','itemShop-controller','itemShopView-controller','itemSelect-controller','readDetail-controller','emergnecychurchRegi','emergnecygeneralRegi','emergnecychurchList','emergnecyGeneralList', 'general-modify','notice-controller','matchingGeneral-controller','intro-controller','backBtn'])
+.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+
+})

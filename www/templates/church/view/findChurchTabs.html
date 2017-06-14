@@ -1,0 +1,74 @@
+<ion-view view-title="찬양하기(교회 찾기)" ng-controller="churchTabCtrl">
+    <!-- <ion-nav-buttons side="left">
+        <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+            <i class="ion-chevron-left"></i>
+        </a>
+    </ion-nav-buttons> -->
+    <ion-content>
+        <div class="find-church-tabs">
+            <div class="tab-nav tabs" style="top:0px; background-color:white">
+                <a class="tab-item tab-item-active" ng-click="selectOrderBy('all')">
+                    <span class="tab-title ng-binding">전체</span>
+                </a>
+                <a class="tab-item" ng-click="selectOrderBy('edit_date')">
+                    <span class="tab-title ng-binding">최근순</span>
+                </a>
+                <a class="tab-item" ng-click="selectOrderBy('score')">
+                    <span class="tab-title ng-binding">별점순</span>
+                </a>
+                <a class="tab-item" ng-click="selectOrderBy('distance')">
+                    <span class="tab-title ng-binding">거리순</span>
+                </a>
+            </div>
+        </div>
+        <div class="find-local-wrap">
+            <div class="list select-form select-local">
+                <label class="item item-select">
+                    <select></select>
+                </label>
+                <label class="item item-select select-local">
+                    <select></select>
+                </label>
+            </div>
+        </div>
+        <div class="tab-cont">
+            <div class="list-tab list-tab1">
+                <div class="find-gen-tab">
+                    <div class="find-local-wrap">
+                        <div class="list select-form select-local">
+                            <label class="item item-select">
+                                <select ng-model="findChurchTab.area_1st_no" ng-change="getArea2ndList()" ng-options="o.no as o.list_name for o in selboxData.area_1st"></select>
+                            </label>
+                            <label class="item item-select select-local">
+                                <select ng-model="findChurchTab.area_2nd_no" ng-change="selectArea2ndList()" ng-options="o.no as o.list_name for o in selboxData.area_2nd"></select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <a class="item item-thumbnail-left item-thumb-wrap" ng-click="openModal(x.employ_data_no)" ng-repeat="x in items">
+                            <img class="circle" ng-src="http://il-bang.com/jubang_ajax/imageProfile/{{ x.profile_img }}" />
+                            <div class="thumblist-date">
+                                <span class="date">{{ x.edit_date }}</span>
+                                <span class="minute">{{ x.edit_time }}</span>
+                                <div class="rateYo" id="rateYo{{ $index }}"></div>
+                            </div>
+                            <p class="thumblist-title">{{ x.event_nm }}</p>
+                            <div class="thumbnailist-cont">{{ x.content }}</div>
+                            <div class="subInfo">
+                                <span>{{ x.area_1st_nm }} > {{ x.area_2nd_nm }}</span>
+                                <span class="price">₩ {{ x.pay }}</span>
+                            </div>
+                            <div class="thumbnail-wrap">
+                                <div class="list thumbnail" ng-repeat="z in photoItems[x.employ_data_no]">
+                                    <img class="add-img" ng-src="http://il-bang.com/jubang_ajax/imageGuin/{{ z }}" width="90" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll distance="20%" ng-if="!noMoreItemsAvailable" on-infinite="loadMore()"></ion-infinite-scroll>
+    </ion-content>
+    <fab-church></fab-church>
+</ion-view>

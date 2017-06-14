@@ -1,0 +1,26 @@
+<ion-radio ng-click="twoBtnSelect(1)" ng-model="choice" ng-value="'A'">
+  <div class="two-btn">
+    <div class="left activate" ui-sref="{{btnInfo.sref1}}">
+      <div class="two-img">
+        <img src="img/{{btnInfo.left}}" alt="">
+      </div>
+      <div class="two-title">
+        <p class="two-tlt-inner inner1">찬양하러 가기</p>
+        <p class="two-tlt-inner">교회를 찾으시는 분</p>
+      </div>
+    </div>
+  </div>
+</ion-radio>
+<ion-radio ng-model="choice" ng-value="'B'"  ng-click="twoBtnSelect(2)">
+  <div class="two-btn">
+      <div class="right" ui-sref="{{btnInfo.sref2}}">
+      <div class="two-img">
+        <img src="img/{{btnInfo.right}}" alt="">
+      </div>
+      <div class="two-title">
+        <p class="two-tlt-inner inner1">찬양사역자 찾기</p>
+        <p class="two-tlt-inner">사람을 찾으시는 분</p>
+      </div>
+    </div>
+  </div>
+</ion-radio>

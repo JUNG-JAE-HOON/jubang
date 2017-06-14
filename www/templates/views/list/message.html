@@ -1,0 +1,25 @@
+<ion-view view-title="알림" ng-controller="messageCtrl">
+  <ion-nav-buttons side="left">
+        <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+              <i class="ion-chevron-left"></i>
+        </a>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list message-list">
+            <div class="item message-tlt">
+                <span class="badge">안내</span>알림 메세지 입니다.
+            </div>
+            <div class="item message-list-cont" ng-click="openPopover(message.no)" ng-repeat="message in messageList" item="messageList">
+                <img src="{{ message.check }}" />
+                <p class="date">{{ message.date }}</p>
+                <p class="message">{{ message.content }}</p>
+            </div>
+        </div>
+        <div class="msg-btn-wrap" ng-show="moreView == true">
+            <div class="btn-wrap">
+                <button class="button button-block default-btn2" ng-click="moreMessage()">더보기</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,97 @@
+<div class="main-card-list main-card-list1">
+  <div class="title1">
+    <h4 class="left">동영상</h4>
+    <p class="right">더보기></p>
+  </div>
+
+    <!-- <div class="title1">
+      <h4 class="left">동영상</h4>
+      <p class="right">더보기 ></p>
+    </div> -->
+    <div class="list card-wrap">
+      <!-- 카드 -->
+      <div class="thumnail-card" ng-repeat="ministryVideoItem in ministryVideoItems" item="ministryVideoItems">
+        <a class="item item-card" href="#" ng-controller="refCtrl">
+          <div>
+            <iframe width="100%" ng-src="{{ministryVideoItem.videoPath}}" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="cardContWrap">
+            <h3 class="cardTitle">{{ ministryVideoItem.event_nm }}</h3>
+            <div class="floatStar" id="ministryVideo{{$index}}"></div>
+            <p class="cardTxt">{{ ministryVideoItem.content }}</p>
+          </div>
+        </a>
+      </div>
+       <!-- 카드-->
+       <!-- 카드 -->
+       <!--
+       <div class="thumnail-card">
+         <a class="item item-card" href="#" ng-controller="refCtrl">
+           <div>
+             <img src="http://www.placehold.it/100x70" width="100%">
+           </div>
+           <div class="cardContWrap">
+             <h3 class="cardTitle">{{carTitle}}</h3>
+             <div class="rateYo"></div>
+             <p class="cardTxt">{{cardTxt}}</p>
+           </div>
+         </a>
+       </div>
+     -->
+        <!-- 카드-->
+    </div>
+  </div>
+  <div class="main-card-list main-card-list2">
+    <div class="title1">
+      <h4 class="left">사진</h4>
+      <p class="right">더보기></p>
+    </div>
+
+    <!-- <div class="title1">
+      <h4 class="left">사진</h4>
+      <p class="right">더보기 ></p>
+    </div> -->
+    <div class="list card-wrap">
+      <!-- 카드 -->
+      <div class="thumnail-card" ng-repeat="ministryPhotoItem in ministryPhotoItems" item="ministryPhotoItems" >
+        <a class="item item-card" href="#">
+          <div class="photo">
+            <img src="http://il-bang.com/jubang_ajax/imageGujik/{{ministryPhotoItem.server_photo_name}}" width="100%">
+          </div>
+          <div class="cardContWrap">
+            <h3 class="cardTitle">{{ministryPhotoItem.title}}</h3>
+            <div class="floatStar" id="ministryPhoto{{$index}}"></div>
+            <p class="cardTxt">{{ministryPhotoItem.content}}</p>
+          </div>
+        </a>
+      </div>
+       <!-- 카드-->
+    </div>
+    </div>
+  <div class="main-thumbnail-list">
+    <div class="title1">
+      <h4 class="left">글</h4>
+
+    </div>
+
+    <!-- <div class="title1">
+      <h4 class="left">글</h4>
+      <p class="right">더보기 ></p>
+    </div> -->
+    <div>
+        <div class="item item-avatar item-review-thumb" href="#" ng-controller="refCtrl" ng-repeat="ministryWritingItem in ministryWritingItems" item="ministryWritingItems">
+          <h3 class="thumb-title">{{ministryWritingItem.title}}</h3>
+          <div class="ministryWriting" id="ministryWriting{{$index}}"> </div>
+          <p class="ministryCont">{{ministryWritingItem.content}}</p>
+        </div>
+    </div>
+  </div>
+  <div class="main-snsBar">
+    <sns-bar></sns-bar>
+  </div>
+  <div class="banner">
+    <img src="img/main-bot-ban.png" alt="" width="100%">
+  </div>
+  <div class="main-footer">
+    <footer></footer>
+  </div>

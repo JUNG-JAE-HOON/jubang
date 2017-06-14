@@ -1,0 +1,90 @@
+<ion-view view-title="찬양하기(교인) 정보" cache-view="false">
+    <ion-content class="detail-back" ng-controller="churchDetailCtrl">
+        <div class="video-wrap">
+            <iframe width="100%" height="210" ng-src="{{ videoPath }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="detail-cont">
+            <div class="title1">
+                <h4 class="left">이미지</h4>
+            </div>
+            <div class="detail-slide-wrap">
+                <div class="thumbnail-list" id="imageList"></div>
+            </div>
+        </div>
+        <div class="list detail-cont">
+            <a class="item item-thumbnail-left item-thumb-wrap" ui-sref="detailPage">
+                <img class="circle" ng-src="{{ profile }}" />
+                <div class="thumblist-date">
+                    <span class="date">{{ date }} {{ time }}</span>
+                    <div class="rateYo" id="rateYo"></div>
+                </div>
+                <p class="thumblist-title">{{ title }}</p>
+                <div class="thumbnailist-cont">{{ content }}</div>
+            </a>
+        </div>
+        <div class="detail-cont">
+            <div class="title1">
+                <h4 class="left">상세정보</h4>
+            </div>
+            <div class="detail-info1-wrap">
+                <ul class="detail-info-ul">
+                    <li class="detail-info-li">
+                        <p class="info-left">성함</p>
+                        <p class="info-right">{{ name }}</p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left">위치</p>
+                        <p class="info-right">{{ address }}</p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left">일시</p>
+                        <p class="info-right">{{ eventDate }}</p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left">금액</p>
+                        <p class="info-right">{{ pay }}원</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="detail-cont">
+            <div class="title1">
+                <h4 class="left">내 평점</h4>
+            </div>
+            <div class="give-star">
+                <div class="rateYo-give-star" id="viewRateYo"></div>
+            </div>
+        </div>
+        <div class="detail-cont">
+            <div class="detail-info2-wrap">
+                <ul class="detail-info-ul">
+                    <li class="detail-info-li" ng-repeat="comment in commentList" item="commentList">
+                        <p class="info-left">{{ comment.id }}</p>
+                        <p class="info-right">
+                            {{ comment.content }}
+                            <span style="padding: 0 5px; color: #bbb;">{{ comment.date }}</span>
+                            <span ng-click="commentDelete(comment.no)" style="padding: 0 5px; color: #ffaa28;">X</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="more" ng-click="commentMore()" ng-show="commentMoreView == true">
+                <span>댓글 더보기</span>
+            </div>
+        </div>
+        <div class="detail-buttons">
+            <div class="detail-delete" ng-click="employDelete(no)">삭제</div>
+            <div class="detail-modify" ng-click="modifyCheck(no)">공고 수정하기</div>
+        </div>
+        <div class="detail-buttons">
+            <div class="detail-emergency">긴급구인하기</div>
+        </div>
+        <div class="detail-cont">
+            <sns-bar></sns-bar>
+            <div class="banner">
+                <img src="img/main-bot-ban.png" width="100%"/>
+            </div>
+            <footer></footer>
+        </div>
+    </ion-content>
+</ion-view>

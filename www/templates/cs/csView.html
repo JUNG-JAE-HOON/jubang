@@ -1,0 +1,46 @@
+<ion-view view-title="묻고답하기" ng-controller="csCtrl">
+  <ion-nav-bar class="jubang-nav-bar">
+
+      <ion-nav-buttons side="left">
+          <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+                <i class="ion-chevron-left"></i>
+          </a>
+      </ion-nav-buttons>       
+  </ion-nav-bar>
+
+  <ion-content class="cs-content">
+    <div class="cs-textArea cs-view-form">
+      <div class="input-padding">
+        <div class="list">
+          <label class="item item-input item-floating-label default-input1">
+            <span class="input-label">{{item.inputTitle}}</span>
+            <input type="text" placeholder="채용공고 작성이 안됩니다." placeholder="제목을 입력해주세요" readonly="true">
+        </label>
+        </div>
+        <div class="text-area-wrap">
+          <textarea name="default-text" rows="8" cols="80" placeholder="문의 내용을 다음 내용과 함께 작성해주세요 &#13;&#10;사용환경 : IOS / Android &#13;&#10;사용 브랜드(모델) : 아이폰,삼성,lg등&#13;&#10;문의내용 : " readonly="true"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="cs-textArea cs-view-reply">
+      <div class="input-padding">
+        <div class="list">
+          <label class="item item-input item-floating-label default-input1">
+            <span class="input-label">{{item.inputTitle}}</span>
+            <input type="text" placeholder="채용공고 작성이 안됩니다." placeholder="제목을 입력해주세요" readonly="true">
+        </label>
+        </div>
+        <div class="text-area-wrap">
+          <textarea name="default-text" rows="8" cols="80" placeholder="문의 내용을 다음 내용과 함께 작성해주세요 &#13;&#10;사용환경 : IOS / Android &#13;&#10;사용 브랜드(모델) : 아이폰,삼성,lg등&#13;&#10;문의내용 : " readonly="true"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="cs-confirm-btn">
+      <div class="btn-wrap">
+        <button class="button button-block button-positive">
+          확인
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

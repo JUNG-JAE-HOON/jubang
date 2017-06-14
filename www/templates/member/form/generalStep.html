@@ -1,0 +1,153 @@
+<ion-view view-title="가입 약관 동의">
+
+
+    <ion-content class="member has-header" ng-controller="signUpCtrl">
+        <div class="basic-wrap1">
+            <div class="singup-check-wrap">
+                <span class="center-text">가입 약관 동의</span>
+                <div class="circle-check">
+                    <ion-list>
+                        <ion-checkbox ng-model="check1" ng-checked="allCheck" ng-disabled="allCheck">개인회원 약관에 동의 (필수)
+                          <span class="right-arrow">
+                            <img src="img/go.png" alt="" width="50%">
+                          </span>
+                        </ion-checkbox>
+                        <ion-checkbox ng-model="check2" ng-checked="allCheck" ng-disabled="allCheck">개인정보 수집 및 이용 동의 (필수)
+                          <span class="right-arrow">
+                            <img src="img/go.png" alt="" width="50%">
+                          </span>
+                        </ion-checkbox>
+                        <ion-checkbox ng-model="check3" ng-checked="allCheck" ng-disabled="allCheck">개인정보 제 3자 제공 및 위탁사항 이용 동의 (필수)
+                          <span class="right-arrow">
+                            <img src="img/go.png" alt="" width="50%">
+                          </span>
+                          </ion-checkbox>
+                        <ion-checkbox ng-model="check4" ng-checked="allCheck" ng-disabled="allCheck">위치기반 서비스 이용 약관 (필수)
+                          <span class="right-arrow">
+                            <img src="img/go.png" alt="" width="50%">
+                          </span>
+                        </ion-checkbox>
+                    </ion-list>
+                    <div class="check-all-back">
+                        <ion-list>
+                            <ion-checkbox ng-model="allCheck" ng-change="allChecked()">모든 약관에 동의하기</ion-checkbox>
+                        </ion-list>
+                    </div>
+                </div>
+            </div>
+            <div class="padding next-btn">
+                <button class="button button-block button-positive" ng-click="nextStep1()">다음</button>
+            </div>
+        </div>
+        <div class="basic-wrap2 tc">
+            <img class="round-thumb" ng-src="{{ profilePath }}" width="150px" height="150px" style="border-radius: 50%;" />
+            <div class="padding">
+                <button class="button button-block default-btn2" ng-click="getPicture('profile')">프로필 첨부</button>
+            </div>
+            <div class="basic-input-wrap">
+                <div class="basic-input-form">
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1 overlap-input">
+                                <input type="text" ng-model="id" placeholder="아이디를 입력해주세요." maxlength="20" />
+                            </label>
+                            <div class="main-color overlap" ng-click="idCheck()">
+                             중복체크
+                            </div>
+                        </div>
+                        <!-- <button class="button button-block default-btn2" ng-click="idCheck()">중복 체크</button> -->
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="text" ng-model="name" placeholder="이름을 입력해주세요." maxlength="4" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="password" ng-model="pwd1" placeholder="비밀번호를 입력해주세요." maxlength="16" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="password" ng-model="pwd2" placeholder="비밀번호를 한번 더 입력해주세요." maxlength="16" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="next-btn next-back-wrap">
+                <div class="padding">
+                    <button class="button button-block button-positive" ng-click="backStep1()">이전</button>
+                </div>
+                <div class="padding">
+                    <button class="button button-block button-positive" ng-click="nextStep2()">다음</button>
+                </div>
+            </div>
+            <div class="login-link-wrap">
+                <a class="goLogin" ui-sref="login">계정이 있으신가요? 로그인 하기</a>
+            </div>
+        </div>
+        <div class="general-step1">
+            <div class="basic-input-wrap">
+                <div class="basic-input-form">
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="text" ng-model="order" placeholder="교단 이름을 입력해주세요." maxlength="45" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="text" ng-model="church" placeholder="교회 이름을 입력해주세요." maxlength="45" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1" style="float: left; width: 30%; margin-right: 5%;">
+                                <input type="text" maxlength="3" ng-model="phone1" pattern="[0-9]*" />
+                            </label>
+                            <label class="item item-input item-floating-label default-input1" style="float: left; width: 30%; margin-right: 5%;">
+                                <input type="text" maxlength="4" ng-model="phone2" pattern="[0-9]*" />
+                            </label>
+                            <label class="item item-input item-floating-label default-input1" style="float: left; width: 30%;">
+                                <input type="text" maxlength="4" ng-model="phone3" pattern="[0-9]*" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-file-wrap">
+                <span class="general-step-tlt">추천 서류</span>
+                <span ng-show="documentsPath != null">추천 서류 검토 후 회원가입이 완료됩니다.</span>
+                <div class="padding">
+                    <button class="button button-block default-btn2" ng-click="getPicture('documents')">첨부하기</button>
+                </div>
+                <img ng-src="{{ documentsPath }}" width="120px" height="200px" />
+            </div>
+            <div class="next-btn next-back-wrap">
+                <div class="padding">
+                    <button class="button button-block button-positive" ng-click="backStep2()">이전</button>
+                </div>
+                <div class="padding">
+                    <button class="button button-block button-positive" ng-click="nextStep3()">다음</button>
+                </div>
+            </div>
+        </div>
+        <div class="general-step-fin">
+            <div class="fin-message"><b>회원가입을</b> 축하합니다.</div>
+            <div class="fin-go-login">
+                <div class="padding">
+                    <default-btn1 ng-repeat="button in singupFin" ui-sref="login"></default-btn1>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

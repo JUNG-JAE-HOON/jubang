@@ -1,0 +1,151 @@
+*{margin:0; padding:0;color:#363636}
+// 색상 정리
+$main-color:#118be8;
+$dark-grey:#e2e5ea;
+$dark-dark-grey:#b3b3b3;
+$grey:#f6f5f6;
+$dark:#565656;
+$red:#ff5555;
+$light-black:#4f4f4f;
+$green:#1a7b18;
+$red:#c44949;
+$font-color:#363636;
+
+$default-padding:0em 2em;
+$default-radius:25px;
+.padding-wrap{padding:0 3em;}
+.popover{
+  opacity: 1!important;
+  border-radius:0 !important;
+  height: 60% !important;
+  top:15% !important;
+  .popover-arrow{
+    display: none !important;
+  }
+}
+// 믹스인
+@mixin circle-big($w,$h,$r){
+  width:$w;
+  height:$h;
+  border-radius:$r;
+}
+
+/* 스마트폰 (가로 및 세로) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* 사용자 코드 */
+}
+
+/* 스마트폰 (가로 ) ----------- */
+@media only screen and (min-width : 321px) {
+/* 사용자 코드 */
+}
+
+/* 스마트폰 (세로) ----------- */
+@media only screen and (max-width : 320px) {
+/* 사용자 코드 */
+}
+
+/* 아이패드 (가로 및 세로) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* 사용자 코드 */
+}
+
+/* 아이패드 (가로) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* 사용자 코드 */
+}
+
+/* 아이패드 (세로) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* 사용자 코드 */
+}
+
+/* PC 및 노트북 ----------- */
+@media only screen and (min-width : 1224px) {
+/* 사용자 코드 */
+}
+
+/* 대형 스크린 ----------- */
+@media only screen and (min-width : 1824px) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 5 & 5S 가로 및 세로 */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 5 & 5S 가로 ------ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 5 & 5S 세로 ------ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 세로 및 가로 */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 가로 */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 세로 */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 Plus 가로 및 세로 */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 Plus 가로 */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 Plus 세로 */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
+/* 사용자 코드 */
+}
+
+/* 아이패드 미니 가로 및 세로 */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1)  {
+/* 사용자 코드 */
+}
+
+/* 아이패드 미니 가로 */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1)  {
+/* 사용자 코드 */
+}
+
+/* 아이패드 미니 세로 */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)  {
+/* 사용자 코드 */
+}
+.tc{
+  width:100%;
+  display: inline-block;
+  text-align: center;
+}
+.icon.ion-ios-arrow-back{
+  color:white !important;
+}
+.bar-jubang{
+  background-color: $main-color !important;
+  color:white !important;
+}
+.main-color{color:$main-color}

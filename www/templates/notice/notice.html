@@ -1,0 +1,25 @@
+<ion-view view-title="공지사항" ng-controller="noticeCtrl">
+  <ion-nav-buttons side="left">
+          <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+                <i class="ion-chevron-left"></i>
+          </a>
+   </ion-nav-buttons>
+  <ion-content class="notice-wrap">
+    <ul class="list">
+      <li class="item" ui-sref="readDetail({no:{{ item.no }}})" ng-repeat="item in items" item="item">
+        <p class="notice-title">{{ item.title }}</p>
+        <span class="write-date">{{ item.datetime }}</span>
+        <span>
+          <img class="read-img" src="img/go.png" alt="">
+        </span>
+      </li>
+    </ul>
+    <div class="btn-wrap">
+      <button class="button button-block default-btn2" ng-click="loadMore()">
+        더보기
+      </button>
+    </div>
+
+    <!-- <input   type="button" value="더보기" /> -->
+  </ion-content>
+</ion-view>

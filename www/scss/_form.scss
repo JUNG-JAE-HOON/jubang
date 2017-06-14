@@ -1,0 +1,221 @@
+.default-input1{
+  border:none;
+  border-bottom:1px solid #ddd;
+  background-color: white !important;
+  padding:0 0 0 1em;
+  input{
+    font-size:14px !important;
+  }
+}
+.main-search{
+  .item-input-inset{
+    background-color: $main-color;
+  }
+}
+.phone-form{
+  background-color: white !important;
+  overflow: hidden;
+  margin-top: 1em;
+  .item{
+    height: 2.5em;
+    margin:0 0 0 0 !important;
+    width: 30%;
+    float: left;
+    padding:0 0 0 .5em !important;
+    border:none;
+    border-bottom:1px solid $dark-grey;
+    &:not(:last-child){
+      margin-right: .8em !important;
+    }
+  }
+  input{
+    padding:0 0 0 0;
+  }
+  select{
+    padding:0 0 0 0;
+    direction: ltr;
+    max-width: 100% !important;
+    width:85%;
+  }
+
+}
+.login-inputs{
+  .item{
+    margin-bottom: .5em;
+  }
+  .list.list-inset{
+    background-color: white;
+  }
+}
+.select-form{
+  @extend.phone-form;
+  margin:0;
+}
+.select-local{
+  .item{
+    width:47.5%;
+  }
+  margin-bottom:1em;
+}
+.select-date{
+  .item{
+    width:45.5%;
+  }
+  .wave{
+    float:left; vertical-align:middle; margin-top:.7em;
+  }
+
+     .item{
+       &:not(:first-child){
+         margin-left: .5em !important;
+       }
+       &:not(:last-child){
+         margin-right: .5em !important;
+       }
+     }
+
+}
+.text-area{
+  width:100%;
+  overflow: hidden;
+  .text-area-wrap{
+    border-top:2px solid $dark-grey;
+    border-bottom:2px solid $dark-grey;
+    textarea{
+      padding:1em;
+    }
+  }
+}
+
+.write-form-wrap{
+    .title1{
+      padding:1em .5em 0;
+      margin:1em 0 0;
+    }
+    .default-input1{
+      padding:0 0 0 .5em !important;
+    }
+}
+.church-write-input{
+  margin-top: 3em;
+  .list{
+    margin-bottom: 1em;
+  }
+}
+.general-write-input{
+  @extend.church-write-input;
+}
+
+.detail-form{
+  overflow: hidden;
+  margin-bottom:1em;
+}
+.basic-input-wrap{
+  .basic-input-form{
+    .list{
+      overflow: hidden;
+      margin-top: 2em;
+    }
+    .overlap{
+      position:absolute;
+      z-index: 3;
+      right:0;
+      top:.5em;
+    }
+    .overlap-input{
+      float: left;
+      position:relative;
+      width: 100%;
+
+    }
+    form{
+        overflow: hidden;
+        .input-padding{
+          .list{
+            overflow: hidden;
+            background-color: white !important;
+          }
+        }
+    }
+  }
+}
+.cs-textArea{
+  background-color: white;
+  overflow: hidden;
+  padding:0 2em;
+  margin-top: 1em;
+  .text-area-wrap{
+    font-size: 12px;
+    textarea{
+      width: 100%;
+      padding-bottom: 2em;
+    }
+  }
+}
+.cs-view-form, .cs-view-reply{
+  input,textarea{
+    background-color: white !important;
+  }
+  input{
+    font-size: 13px !important;
+    color:$main-color !important;
+  }
+  .item-input{
+    padding:0 0 0 0;
+  }
+  input::placeholder {
+    color: $main-color;
+    font-weight: bold;
+  }
+  textarea::placeholder {
+    color: black;
+  }
+}
+.matching-select-wrap{
+  padding:4em .5em 0 !important;
+  margin:0 !important;
+  label{
+    border:0 !important;
+  }
+  .matching-select{
+    font-size:13px;
+    max-width:100% !important;
+    width:100%;
+    direction: ltr;
+    padding: 0 48px 0 20px;
+    height: 2.8em;
+  }
+}
+.matching-view{
+  background-color: $grey;
+  .matching-list-wrap{
+    @extend.regi-list-wrap;
+    .count{
+      padding:1em !important;
+      text-align: center;
+      p{
+        margin:0 !important;
+      }
+    }
+  }
+}
+.list-tab2{
+  .matching-select-wrap{
+    padding:.6em .5em 0 !important
+  }
+}
+.check-all-back{
+  width:100%;
+  background-color:$grey;
+  padding: .3em 1em;
+  text-align: center;
+  margin-top:2em;
+  label{
+    background-color:$grey;
+    text-align: center !important;
+    padding: .5em !important;
+       .checkbox{
+         left:5em !important;
+       }
+  }
+}

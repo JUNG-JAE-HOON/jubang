@@ -1,0 +1,66 @@
+.main-tabs{
+  padding: 1em 0;
+  background-color: $grey;
+  overflow: hidden;
+  height: 4.5em;
+  .tabs{
+    position: inherit;
+    padding:0 0 0 0;
+    height: 45px;
+    .tab-title{
+      font-size: 16px;
+      line-height: 2.8em;
+    }
+    a{
+      max-width: none !important;
+      font-weight: bold;
+      opacity:1;
+      background-color: white;
+      .tab-title{
+        color:#b5b5b5;
+      }
+    }
+    a.tab-item-active{
+      background-color: $main-color;
+      color:white;
+      .tab-title{
+        color:white;
+      }
+    }
+    // .tab-item-active{
+    //   background: white !important;
+    //   color:$dark-grey !important;
+    // }
+  }
+  .view-container{
+    background-color: $grey;
+  }
+}
+.find-gen-tabs{
+  .tab-nav.tabs{
+    top:0 !important;
+    border-bottom:2px solid $dark-grey;
+    background-color: white !important;
+    .tab-item-active{
+      border-bottom:4px solid $main-color !important;
+    }
+  }
+}
+.find-church-tabs{
+  @extend.find-gen-tabs
+}
+.find-gen-tab{
+  margin-top: 7px;
+  background-color: $grey;
+  overflow: hidden;
+  .select-form{
+    padding-left:.5em;
+    background-color: $grey !important;
+  }
+  .find-local-wrap{
+    margin:0.5em 0;
+  }
+}
+.list-tab2,.list-tab3,.list-tab4{
+  display: none;
+}

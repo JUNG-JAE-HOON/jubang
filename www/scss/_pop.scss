@@ -1,0 +1,52 @@
+.emergency-pop{
+  width:90% !important;
+  margin-left:0 !important;
+  left:5%;
+  top:12% !important;
+  font-size:12px;
+  white-space: pre-line;
+  border-radius: 2em !important;
+  overflow: hidden;
+  &.popover{
+    height: 42% !important;
+  }
+  ion-content{
+    padding:0 1em;
+    height: auto !important;
+    letter-spacing: -.1em;
+  }
+
+}
+.question{
+  .popup-body{
+    font-size:12px;
+    padding:10px 20px;
+  }
+}
+.widthdraw-form{
+    .popup-body{
+      .item-input{
+        font-size:12px;
+        padding:0 .5em;
+        margin-bottom: .5em;
+        input{
+          font-size: 12px;
+        }
+      }
+      h6{
+        text-align: center;
+        margin-top: 2em;
+      }
+      .item-select{
+        display: inline-block;
+        width:100%;
+        select{
+          min-width:100%;
+          width:100%;
+          direction:ltr;
+          font-size: 12px;
+        }
+      }
+
+    }
+  }

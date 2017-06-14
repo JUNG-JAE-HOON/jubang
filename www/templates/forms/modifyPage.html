@@ -1,0 +1,91 @@
+<ion-view view-title="정보 수정" cache-view="false">
+    <ion-content ng-controller="modifyCtrl">
+        <div class="modify-wrap">
+            <div class="detail-info1-wrap">
+                <ul class="detail-info-ul">
+                    <li class="detail-info-li">
+                        <p class="info-left"></p>
+                        <p class="info-right"></p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left"></p>
+                        <p class="info-right"></p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left">이름</p>
+                        <p class="info-right">{{ name }}</p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left"></p>
+                        <p class="info-right"></p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left">아이디</p>
+                        <p class="info-right">{{ id }}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="basic-input-wrap">
+                <div class="basic-input-form">
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="password" ng-model="pwd1" placeholder="비밀번호를 입력해주세요." maxlength="16" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="password" ng-model="pwd2" placeholder="비밀번호를 한번 더 입력해주세요." maxlength="16" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="text" ng-model="order" placeholder="교단 이름을 입력해주세요." maxlength="45" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="text" ng-model="church" placeholder="교회 이름을 입력해주세요." maxlength="45" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="text" ng-model="ministry" placeholder="담임 목사 이름을 입력해주세요." maxlength="10" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1" style="float: left; width: 30%; margin-right: 5%;">
+                                <input type="text" maxlength="3" ng-model="phone1" pattern="[0-9]*" />
+                            </label>
+                            <label class="item item-input item-floating-label default-input1" style="float: left; width: 30%; margin-right: 5%;">
+                                <input type="text" maxlength="4" ng-model="phone2" pattern="[0-9]*" />
+                            </label>
+                            <label class="item item-input item-floating-label default-input1" style="float: left; width: 30%;">
+                                <input type="text" maxlength="4" ng-model="phone3" pattern="[0-9]*" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="general-step-tlt">{{ imgName }}</div>
+            <div class="add-file-wrap">
+                <img ng-src="{{ imagePath }}" width="150px" height="150px" />
+            </div>
+            <div class="btn-wrap">
+                <button class="button button-block default-btn1" ng-click="infoModify(no)">정보 수정 완료</button>
+                <button class="button button-block default-btn3">탈퇴하기</button>
+                <button class="button button-block default-btn2" ui-sref="app.main">취소하기</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

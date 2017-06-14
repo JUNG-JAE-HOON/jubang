@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@media all and (max-device-width: 320px) {
+  * {
+    font-size: 12px !important; }
+
+  /* 스크린 너비가 최소 320px 이상 '그리고' 480px이하이면 실행  */
+  .center-text {
+    width: 40% !important; }
+
+  .member .basic-wrap1 {
+    padding: 0 0 0 0; }
+    .member .basic-wrap1 .singup-check-wrap .circle-check .list .item {
+      font-size: 10px; }
+      .member .basic-wrap1 .singup-check-wrap .circle-check .list .item .checkbox-icon {
+        margin: .8em 0 0 -.8em; }
+    .member .basic-wrap1 .next-btn {
+      margin-top: 6em; }
+
+  .default-input1 input {
+    font-size: 12px !important; }
+
+  .basic-input-wrap .basic-input-form .overlap {
+    font-size: 12px; } }
+.platform-ios.platform-cordova .main-two-btn img {
+  margin-top: -5% !important; }
+.platform-ios.platform-cordova .main .two-btn .main .two-btn .left .main .two-btn .left .two-img .main .two-btn .left .two-img img {
+  width: 100%;
+  margin-top: -2em;
+  margin-left: -1em; }
+
+/*# sourceMappingURL=iphone.css.map */

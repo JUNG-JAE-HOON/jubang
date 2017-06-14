@@ -1,0 +1,21 @@
+<div class="detail-info2-wrap">
+  <ul class="detail-info-ul">
+      <li class="detail-info-li" ng-repeat="x in commentList">
+        <p class="info-left">
+          {{x.reviewId}}
+        </p>
+        <p class="info-right">
+          {{x.reviewContent}}
+        </p>
+        <p class="btn-wrap" ng-if="lowerId==x.reviewId">
+          <button class="button button-positive" ng-click="resumeReviewDelete(x.no,x.reviewContent)">삭제</button>
+        </p>
+      </li>
+
+      <li class="detail-info-li" ng-if="commentList == null">
+        <p class="tc">
+          {{noReview}}
+        </p>
+      </li>
+  </ul>
+</div>

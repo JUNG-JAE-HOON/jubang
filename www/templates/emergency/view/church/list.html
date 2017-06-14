@@ -1,0 +1,46 @@
+<ion-view view-title="긴급구인" cache-view="false">
+    <ion-content class="elc-wrap" ng-controller="eclCtrl">
+        <div class="regi-exist">
+            <div class="regi-list-wrap" ng-show="not == false">
+                <div class="intro">
+                    <p class="main-color"><b class="main-color">긴급구인</b>이란?</p>
+                </div>
+                <div class="list" ng-repeat="employ in employList" item="employList">
+                    <div class="item item-thumbnail-left item-thumb-wrap">
+                        <img class="circle" src="{{ employ.profile }}" />
+                        <div class="thumblist-date">
+                            <span class="date">{{ employ.date }}</span>
+                            <span class="minute">{{ employ.time }}</span>
+                            <div class="rateYo" id="rate{{ employ.ratingNo }}"></div>
+                        </div>
+                        <p class="thumblist-title">{{ employ.title }}</p>
+                        <div class="thumbnailist-cont">{{ employ.content }}</div>
+                        <div class="subInfo">
+                            <span class="price">₩ {{ employ.pay }}</span>
+                        </div>
+                        <div class="regi-button-wrap">
+                            <div class="three-btn">
+                                <ul class="three-btn-ul">
+                                    <li class="three-btn-li" ui-sref="detailChurch({ no: employ.no })">
+                                        <img src="img/regi-btn1.png" width="15%" />보기
+                                    </li>
+                                    <li class="three-btn-li" ng-click="modifyCheck(employ.no)">
+                                        <img src="img/regi-btn2.png" width="13%" />공고 수정
+                                    </li>
+                                    <li class="three-btn-li" ng-click="employDelete(employ.no)">
+                                        <img src="img/regi-btn3.png" width="10%" />삭제
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="padding-wrap">
+                <div class="church-regi-title" ng-bind-html="emptyCon" ng-show="not == true"></div>
+                <default-btn1 ng-repeat="button in button11" ng-click="churchWriteCheck('N')"></default-btn1>
+                <default-btn2 ng-repeat="button in button22" ng-click="churchWriteCheck('Y')"></default-btn2>
+            </div> -->
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,63 @@
+<ion-view view-title="내 채용 공고" cache-view="false" ng-controller="churchRegi">
+    <ion-nav-buttons side="left">
+          <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+                <i class="ion-chevron-left"></i>
+          </a>
+    </ion-nav-buttons>
+    <ion-content class="church-regi">
+        <div class="regi-exist">
+            <div class="regi-tabs">
+                <div class="find-gen-tabs">
+                    <div class="tab-nav tabs" style="top:0px; background-color:white">
+                        <a class="tab-item tab-item-active" id="left" ng-click="employCheck('ing')">
+                            <span class="tab-title ng-binding">진행중인 채용 공고</span>
+                        </a>
+                        <a class="tab-item" id="right" ng-click="employCheck('past')">
+                            <span class="tab-title ng-binding">지난 채용 공고</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="regi-list-wrap" ng-show="not == false">
+                <div class="count">
+                    <p>전체 <b class="total">{{ totalList }}</b>건 (최대 <b class="max">10</b>건)</p>
+                </div>
+                <div class="list" ng-repeat="employ in employList" item="employList">
+                    <div class="item item-thumbnail-left item-thumb-wrap">
+                        <img class="circle" src="{{ employ.profile }}" />
+                        <div class="thumblist-date">
+                            <span class="date">{{ employ.date }}</span>
+                            <span class="minute">{{ employ.time }}</span>
+                            <div class="rateYo" id="rate{{ employ.ratingNo }}"></div>
+                        </div>
+                        <p class="thumblist-title">{{ employ.title }}</p>
+                        <div class="thumbnailist-cont">{{ employ.content }}</div>
+                        <div class="subInfo">
+                            <span class="price">₩ {{ employ.pay }}</span>
+                        </div>
+                        <div class="regi-button-wrap">
+                            <div class="three-btn">
+                                <ul class="three-btn-ul">
+                                    <li class="three-btn-li" ui-sref="detailChurch({ no: employ.no })">
+                                        <img src="img/regi-btn1.png" width="15%" />보기
+                                    </li>
+                                    <li class="three-btn-li" ng-click="modifyCheck(employ.no)">
+                                        <img src="img/regi-btn2.png" width="13%" />공고 수정
+                                    </li>
+                                    <li class="three-btn-li" ng-click="employDelete(employ.no)">
+                                        <img src="img/regi-btn3.png" width="10%" />삭제
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-wrap">
+                <div class="church-regi-title" ng-bind-html="emptyCon" ng-show="not == true"></div>
+                <default-btn1 ng-repeat="button in button11" ng-click="churchWriteCheck('N')"></default-btn1>
+                <default-btn2 ng-repeat="button in button22" ng-click="churchWriteCheck('Y')"></default-btn2>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

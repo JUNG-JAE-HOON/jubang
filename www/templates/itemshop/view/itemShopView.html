@@ -1,0 +1,71 @@
+<ion-view view-title="아이템 내역 확인"  ng-controller="itemShopViewCtrl">
+
+  <ion-content class="itemShop-content">
+    <div class="itemShop-list-wrap">
+      <div class="list">
+        <div class="item">
+          자동매칭서비스 1회
+          <div class="useInfo">
+            {{autoMatchingOne}}회
+          </div>
+        </div>
+        <div class="item">
+          자동매칭서비스 일주일
+          <div class="useInfo">
+            <span style="margin-right:1em">{{autoMatchingWeekStart}}</span><span>{{autoMatchingWeekEnd}}</span>
+          </div>
+        </div>
+        <div class="item">
+          자동매칭서비스 한달
+          <div class="useInfo">
+            <span style="margin-right:1em">{{autoMatchingMonthStart}}</span><span>{{autoMatchingMonthEnd}}</span>
+          </div>
+        </div>
+        <div class="item" ng-if=kind=='church'>
+          열람 서비스 1회
+          <div class="useInfo">
+            {{viewOne}}회
+          </div>
+        </div>
+        <div class="item" ng-if=kind=='church'>
+          열람서비스 일주일
+          <div class="useInfo">
+            <span style="margin-right:1em">{{viewWeekStart}}</span><span>{{viewWeekEnd}}</span>
+          </div>
+        </div>
+        <div class="item" ng-if=kind=='church'>
+          열람서비스 한달
+          <div class="useInfo">
+            <span style="margin-right:1em">{{viewMonthStart}}</span><span>{{viewMonthEnd}}</span>
+          </div>
+        </div>
+        <div class="item" ng-if=kind=='church'>
+          정기권 일주일
+          <div class="useInfo">
+            <span style="margin-right:1em">{{sumWeekStart}}</span><span>{{sumWeekEnd}}</span>
+          </div>
+        </div>
+        <div class="item" ng-if=kind=='church'>
+          정기권 한달
+          <div class="useInfo">
+            <span style="margin-right:1em">{{sumMonthStart}}</span><span>{{sumMonthEnd}}</span>
+          </div>
+        </div>
+        <div class="item">
+          긴급구인 1회
+          <div class="useInfo">
+            {{emergency}}회
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="itemShop-btn-wrap">
+    <div class="btn-wrap">
+      <button class="button button-block default-btn2" ui-sref="app.main">
+        메인으로
+      </button>
+    </div>
+  </div>
+
+  </ion-content>
+</ion-view>

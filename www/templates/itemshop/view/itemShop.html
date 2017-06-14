@@ -1,0 +1,93 @@
+<ion-view view-title="아이템샵" ng-controller="itemShopCtrl">
+  <ion-nav-buttons side="left">
+        <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+              <i class="ion-chevron-left"></i>
+        </a>
+</ion-nav-buttons>
+<ion-nav-view name="itemShop.itemSelect"></ion-nav-view>
+  <ion-content class="intro-content">
+    <div class="intro-wrap">
+      <div class="item-wrap">
+        <div class="title-wrap">
+          <img src="img/intro/title.png" alt="" width="50%">
+        </div>
+        <ul class="jubang-item-list jubang-item-list1">
+          <li class="jubang-item">
+            <img src="img/intro/label1.png" alt="">
+            <h5>자동매칭 서비스</h5>
+            <p>구인자가 원하는 구직자를 찾아주는 자동매칭 서비스 입니다.</p>
+            <div class="btn-wrap">
+              <!-- <button class="button button-block default-btn2" ng-click="param()">
+                구매하기
+              </button> -->
+              <button class="button button-block default-btn2" ng-click="param(1)">
+                구매하기
+              </button>
+            </div>
+          </li>
+          <li class="jubang-item">
+            <img src="img/intro/label1.png" alt="">
+            <h5>자동매칭 서비스</h5>
+            <p>구인자가 원하는 구직자를 찾아주는 자동매칭 서비스 입니다.</p>
+            <div class="btn-wrap">
+              <button class="button button-block default-btn2" ng-click="param(3)">
+                구매하기
+              </button>
+            </div>
+          </li>
+          <li class="jubang-item">
+            <img src="img/intro/label1.png" alt="">
+            <h5>자동매칭 서비스</h5>
+            <p>구인자가 원하는 구직자를 찾아주는 자동매칭 서비스 입니다.</p>
+            <div class="btn-wrap">
+              <button class="button button-block default-btn2" ng-click="param(5)">
+                구매하기
+              </button>
+            </div>
+          </li>
+        </ul>
+        <ul class="jubang-item-list jubang-item-list2">
+          <li class="jubang-item">
+            <img src="img/intro/label2.png" alt="">
+            <h5>자동매칭 서비스</h5>
+            <p>구인자가 원하는 구직자를 찾아주는 자동매칭 서비스 입니다.</p>
+            <div class="btn-wrap">
+              <button class="button button-block default-btn2" ng-click="param(2)">
+                구매하기
+              </button>
+            </div>
+          </li>
+          <li class="jubang-item">
+            <img src="img/intro/label1.png" alt="">
+            <h5>자동매칭 서비스</h5>
+            <p>구인자가 원하는 구직자를 찾아주는 자동매칭 서비스 입니다.</p>
+            <div class="btn-wrap">
+              <button class="button button-block default-btn2" ng-click="param(4)">
+                구매하기
+              </button>
+            </div>
+          </li>
+          <li class="jubang-item">
+            <img src="img/intro/label2.png" alt="">
+            <h5>자동매칭 서비스</h5>
+            <p>구인자가 원하는 구직자를 찾아주는 자동매칭 서비스 입니다.</p>
+            <div class="btn-wrap">
+              <button class="button button-block default-btn2" ng-click="param(6)">
+                구매하기
+              </button>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+      <div class="buy-item-btn">
+        <div class="btn-wrap">
+          <button class="button button-block bar-jubang" ui-sref="itemUseList">
+            아이템 내역 확인하기
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

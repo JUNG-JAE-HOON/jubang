@@ -1,0 +1,27 @@
+<ion-view ng-controller="readDetailCtrl" view-title="공지사항">
+  <ion-nav-buttons side="left">
+            <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+                  <i class="ion-chevron-left"></i>
+            </a>
+   </ion-nav-buttons>
+<ion-content class="notice-wrap">
+  <ul class="list">
+    <li class="item" ui-sref="readDetail">
+      <p class="notice-title">{{ title }}</p>
+      <span class="write-date">{{ date }}</span>
+    </li>
+  </ul>
+  <div class="article">
+    <img ng-src="http://mmcp.co.kr/board2/data/file/notice1/{{ item.file }}" ng-show="item.data" ng-repeat="item in items" item="item" width="100%"/>
+        <div class="pd15 mb50">
+            <div class="wid100 f16 tc" ng-bind-html="content"></div>
+            <a href="{{ link1 }}">
+                <div class="tc mt10" style="color: #288cff;">{{ link1 }}</div>
+            </a>
+            <a href="{{ link2 }}">
+                <div class="tc mt5" style="color: #288cff;">{{ link2 }}</div>
+            </a>
+        </div>
+  </div>
+</ion-content>
+</ion-view>

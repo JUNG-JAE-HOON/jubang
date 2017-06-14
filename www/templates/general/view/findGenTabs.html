@@ -1,0 +1,88 @@
+<ion-view view-title="찬양사역자(사람찾기)"  ng-controller="genTabCtrl">
+
+  <ion-content>
+    <div class="find-gen-tabs">
+        <div class="tab-nav tabs" style="top:0px; background-color:white">
+            <a class="tab-item tab-item-active" style="" ng-click="selectOrderBy('all')">
+              <!-- ngIf: badge --><!-- ngIf: getIcon() -->
+              <span class="tab-title ng-binding" >전체</span>
+            </a>
+            <a class="tab-item" style="" ng-click="selectOrderBy('edit_date')">
+              <!-- ngIf: badge --><!-- ngIf: getIcon() -->
+              <span class="tab-title ng-binding" >최근순</span>
+            </a>
+            <a class="tab-item" style="" ng-click="selectOrderBy('score')">
+              <!-- ngIf: badge --><!-- ngIf: getIcon() -->
+              <span class="tab-title ng-binding">별점순</span>
+            </a>
+            <a class="tab-item" style="" ng-click="selectOrderBy('distance')">
+              <!-- ngIf: badge --><!-- ngIf: getIcon() -->
+              <span class="tab-title ng-binding">거리순</span>
+            </a>
+          </div>
+      </div>
+      <div class="find-local-wrap">
+        <div class="list select-form select-local">
+          <label class="item item-select">
+            <select class="" name="asd" >
+            </select>
+          </label>
+          <label class="item item-select select-local" >
+            <select class="" name="asd" >
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="tab-cont">
+        <div class="list-tab list-tab1">
+          <!-- 리스트 하나 -->
+          <div class="find-gen-tab">
+            <div class="find-local-wrap">
+              <div class="list select-form select-local">
+                <label class="item item-select">
+                  <select class="" name="asd" ng-model="fGT.area_1st_no" ng-change="getArea2ndList()" ng-options="o.no as o.list_name for o in selboxData.area_1st">
+                  </select>
+                </label>
+                <label class="item item-select select-local">
+                  <select class="" name="asd" ng-model="fGT.area_2nd_no" ng-change="selectArea2ndList()" ng-options="o.no as o.list_name for o in selboxData.area_2nd">
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="list">
+              <!-- 리스트 하나 -->
+                <a class="item item-thumbnail-left item-thumb-wrap" ng-click="openModal(x.resume_data_no)" ng-repeat="x in items">
+                <!-- <a class="item item-thumbnail-left item-thumb-wrap" ui-sref="detailGeneral" ng-repeat="x in items"> -->
+                  <img class="circle" src="http://il-bang.com/jubang_ajax/imageProfile/{{x.profile_img}}">
+                  <div class="thumblist-date">
+                    <span class="date">{{x.edit_date}}</span>
+                    <span class="minute">{{x.edit_time}}</span>
+                    <div class="rateYo" id="rateYo{{$index}}">
+                    </div>
+                  </div>
+                  <p class="thumblist-title">{{x.title}}</p>
+                  <div class="thumbnailist-cont">
+                    {{x.content}}
+                  </div>
+                  <div class="subInfo">
+                    <span>{{x.area_1st_nm}}>{{x.area_2nd_nm}}</span>
+                    <span class="price">₩{{x.pay}}</span>
+                  </div>
+                  <div class="thumbnail-wrap">
+                    <div class="list thumbnail" ng-repeat="z in photoItems[x.resume_data_no]">
+                      <img ng-if="z!=''" class="add-img" src="http://il-bang.com/jubang_ajax/imageGujik/{{z}}" width="90">
+                    </div>
+                  </div>
+                </a>
+                <!-- 리스트 하나 -->
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <ion-infinite-scroll distance="20%" ng-if = "!noMoreItemsAvailable" on-infinite = "loadMore()"></ion-infinite-scroll>
+  </ion-content>
+  <fab-general></fab-general>
+</ion-view>

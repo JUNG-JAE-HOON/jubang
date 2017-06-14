@@ -1,0 +1,44 @@
+<ion-view view-title="회원가입">
+  <ion-content ng-controller="signUpCtrl" class="member has-header">
+    <div class="basic-wrap1">
+      <default-btn2 ng-repeat="button in button2"></default-btn2>
+      <div class="basic-input-wrap">
+        <form class="basic-input-form" method="post">
+          <default-input1 ng-repeat="item in input1"></default-input1>
+          <default-input1 ng-repeat="item in input2"></default-input1>
+        </form>
+      </div>
+      <default-btn1 ng-repeat="button in button1" ng-click="hoho()"></default-btn1>
+      <div class="login-link-wrap">
+        <a href="#" class="goLogin" ui-sref="login">
+          계정이 있으신가요?? 로그인하기
+        </a>
+      </div>
+    </div>
+    <div class="basic-wrap2">
+
+      <div class="basic-input-wrap">
+        <form class="basic-input-form" method="post">
+          <default-input1 ng-repeat="item in input1"></default-input1>
+          <default-input1 ng-repeat="item in input2"></default-input1>
+        </form>
+      </div>
+      <div class="singup-check-wrap">
+        <span class="center-text">가입약관동의</span>
+        <div class="circle-check" >
+          <form class="" method="post">
+            <checkbox1 ng-repeat="checkCir in checkCircle"></checkbox1>
+
+            <div class="check-all-back">
+              <checkbox1 ng-repeat="checkCir in checkAll"></checkbox1>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="next-btn">
+        <default-btn1 ng-repeat="button in button1"></default-btn1>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

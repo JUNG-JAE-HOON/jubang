@@ -1,0 +1,120 @@
+<ion-view view-title="내 매칭진행 리스트" ng-controller="matchingChurchCtrl" class="matching-view">
+  <ion-nav-buttons side="left">
+      <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+            <i class="ion-chevron-left"></i>
+      </a>
+  </ion-nav-buttons>
+  <ion-content class="cs-content church-regi">
+    <div class="find-gen-tabs">
+        <div class="tab-nav tabs" style="top:0px; background-color:white" ng-model="hoho">
+            <a class="tab-item" id="matchingListLeft" ng-click="selectTab('cur')">
+              <!-- ngIf: badge --><!-- ngIf: getIcon() -->
+              <span class="tab-title ng-binding">현재 진행매칭리스트</span>
+            </a>
+            <a class="tab-item" id="matchingListRigth" ng-click="selectTab('past')">
+              <!-- ngIf: badge --><!-- ngIf: getIcon() -->
+              <span class="tab-title ng-binding">지난매칭리스트</span>
+            </a>
+        </div>
+    </div>
+    <div class="list-tab list-tab1">
+      <div class="list matching-select-wrap" style="padding-top:5em;">
+        <label class="item item-select">
+          <select class="matching-select" name="asd" ng-change="changeResumeTitle()" ng-model="matching.resume_data_no" ng-options="o.resume_data_no as o.title for o in selboxData.resume_list">
+          </select>
+        </label>
+      </div>
+
+      <div class="matching-list-wrap">
+        <div class="count">
+          <p><b class="total">이력서</b>에 해당하는<b class="total">매칭리스트</b>가 보여집니다</p>
+        </div>
+        <div class="list">
+          <!-- 리스트 하나 -->
+            <a class="item item-thumbnail-left item-thumb-wrap" ui-sref="detailGeneral"  ng-repeat="x in items">
+              <img class="circle" src="http://il-bang.com/jubang_ajax/imageChurch/{{x.church_img}}">
+              <div class="thumblist-date">
+                <span class="date">{{x.edit_date}}</span>
+                <span class="minute">{{x.edit_date}}</span>
+                <div class="rateYo">
+                </div>
+              </div>
+              <p class="thumblist-title">{{x.event_nm}}</p>
+              <div class="thumbnailist-cont">
+                {{x.content}}
+              </div>
+              <div class="subInfo">
+                <span class="price">{{x.pay}}</span>
+              </div>
+              <div class="matching-button-wrap">
+                <div class="two-btn">
+                  <ul class="two-btn-ul">
+                    <li class="two-btn-li" ui-sref="detailGeneral">
+                      수락하기
+                    </li>
+                    <li class="two-btn-li">
+                      거절하기
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="list-tab list-tab2">
+      <div class="list matching-select-wrap" style="padding-top:5em;">
+        <label class="item item-select">
+          <select class="matching-select" name="asd">
+            <option value="">이력서 제목 되겠습니다1</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+        </label>
+      </div>
+
+      <div class="matching-list-wrap">
+        <div class="count">
+          <p><b class="total">이력서</b>에 해당하는<b class="total">매칭리스트</b>가 보여집니다</p>
+        </div>
+      <div class="list">
+        <!-- 리스트 하나 -->
+          <a class="item item-thumbnail-left item-thumb-wrap" ui-sref="detailGeneral" ng-repeat="x in items">
+            <img class="circle" src="http://il-bang.com/jubang_ajax/imageChurch/{{x.profile_img}}">
+            <div class="thumblist-date">
+              <span class="date">{{x.profile_img}} {{x.edit_date}}</span>
+              <span class="minute">5분전</span>
+              <div class="rateYo">
+              </div>
+            </div>
+            <p class="thumblist-title">{{x.event_nm}}</p>
+            <div class="thumbnailist-cont">
+              {{x.content}}
+            </div>
+            <div class="subInfo">
+              <span class="price">{{x.pay}}</span>
+            </div>
+            <div class="matching-button-wrap">
+              <div class="two-btn">
+                <ul class="two-btn-ul">
+                  <li class="two-btn-li" ui-sref="detailGeneral">
+                    수락하기
+                  </li>
+                  <li class="two-btn-li">
+                    거절하기
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </a>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll distance="20%" ng-if = "!noMoreItemsAvailable" on-infinite = "loadMore()"></ion-infinite-scroll>
+
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,59 @@
+<ion-view hide-nav-bar="true" scroll="true">
+    <ion-content class="member login-content" ng-controller="loginCtrl" cache-view="false">
+        <h1 class="jubang-logo"><img src="img/jubangLogo.png" alt="" width="50%"></h1>
+        <div class="login-kind-select">
+            <ion-list ng-init="loginType = 'ministry'">
+                <ion-radio ng-model="loginType" ng-value="'ministry'" ng-change="loginTypeChange()">
+                    <div class="two-btn">
+                        <div class="left activate">
+                            <div class="two-title">
+                                <p class="two-tlt-inner inner1">찬양하러 가기</p>
+                                <p class="two-tlt-inner">교회를 찾으시는 분</p>
+                            </div>
+                        </div>
+                    </div>
+                </ion-radio>
+                <ion-radio ng-model="loginType" ng-value="'church'" ng-change="loginTypeChange()">
+                    <div class="two-btn">
+                        <div class="right">
+                            <div class="two-title">
+                                <p class="two-tlt-inner inner1">찬양사역자 찾기</p>
+                                <p class="two-tlt-inner">사람을 찾으시는 분</p>
+                            </div>
+                        </div>
+                    </div>
+                </ion-radio>
+            </ion-list>
+        </div>
+        <div class="login-inputs">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" ng-model="id" placeholder="아이디" />
+                </label>
+                <label class="item item-input">
+                    <input type="password" ng-model="pwd" placeholder="비밀번호" />
+                </label>
+            </div>
+        </div>
+        <div class="login-btn">
+            <div class="padding">
+                <button class="button button-block button-positive" ng-click="login()">로그인</button>
+            </div>
+        </div>
+        <div class="login-bot-wrap">
+            <div class="rtg-check auto-login">
+                <ion-list>
+                    <ion-checkbox ng-model="auto">자동 로그인</ion-checkbox>
+                </ion-list>
+            </div>
+            <span class="goLogin">
+                <a ui-sref="find({ type: 'id' })">아이디</a> /
+                <a ui-sref="find({ type: 'pwd' })">비밀번호</a> 찾기
+            </span>
+        </div>
+        <p class="not-yet">
+            <span>아직 회원이 아니세요?</span>
+            <a ui-sref="memKind">회원가입</a>
+        </p>
+    </ion-content>
+</ion-view>

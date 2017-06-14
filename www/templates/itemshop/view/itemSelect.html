@@ -1,0 +1,184 @@
+  <ion-view view-title="긴급구인/열람서비스" ng-controller="itemSelCtrl">
+    <!-- <ion-nav-buttons side="left">
+          <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+                <i class="ion-chevron-left"></i>
+          </a>
+ </ion-nav-buttons> -->
+  <ion-nav-buttons side="right">
+      <!-- 아이콘 필요시 공란으로 -->
+  </ion-nav-buttons>
+  <ion-content ng-controller="inAppCtrl">
+    <div class="item-select-wrap">
+      <div class="ment ment-general" ng-if="pageNum==1">
+        <span class="main-color">구인자</span>가 원하는<br>
+        <span class="main-color">구직자</span>를 찾아주는<br>
+        <span class="main-color">자동매칭서비스</span> 입니다.
+        <p>구직자가 매칭리스트에서 최종 승락시 아이템 구매가 사용됩니다.<br>(먼저 신청하신분이 아이템을 구매하게 됩니다)</p>
+      </div>
+      <div class="ment ment-general" ng-if="pageNum==2">
+        <span class="main-color">구직자</span>가 원하는<br>
+        <span class="main-color">구인자</span>를 찾아주는<br>
+        <span class="main-color">자동매칭서비스</span> 입니다.
+        <p>구인자가 매칭리스트에서 최종 승락시 아이템 구매가 사용됩니다.<br>(먼저 신청하신분이 아이템을 구매하게 됩니다)</p>
+      </div>
+      <div class="ment ment-general" ng-if="pageNum==3">
+        <span class="main-color">구인자</span>가 <span class="main-color">구직자</span>의 구인정보<br>
+        전체를 <span class="main-color">열람</span> 할 수<br>
+        있습니다.
+        <p>구직자가 매칭리스트에서 최종 승락시 아이템 구매가 사용됩니다.<br>(먼저 신청하신분이 아이템을 구매하게 됩니다)</p>
+      </div>
+      <div class="ment ment-general" ng-if="pageNum==4">
+        <span class="main-color">자동매칭서비스</span>와 <br>
+        <span class="main-color">열람서비스</span>가 융합된 서비스로<br>
+        두가지 서비스를 이용할 수 있는<br>
+        상품입니다.
+        <p>구직자가 매칭리스트에서 최종 승락시 아이템 구매가 사용됩니다.<br>(먼저 신청하신분이 아이템을 구매하게 됩니다)</p>
+      </div>
+      <div class="ment ment-general" ng-if="pageNum==5">
+        긴급구인 신청시 <span class="main-color">모든 구직자에게</span><br>
+        <span class="main-color">알림이 가는 서비스</span> 입니다
+      </div>
+      <div class="ment ment-general" ng-if="pageNum==6">
+        긴급구인 신청시 <span class="main-color">모든 구인자에게</span><br>
+        <span class="main-color">알림이 가는 서비스</span> 입니다
+      </div>
+      <!-- <div class="ment ment-church">
+          <span class="main-color">구인자</span>가 <span class="main-color">구직자</span>의 구직정보 <br>
+          전체를 <span>열람</span> 할 수 <br>
+          있습니다
+      </div> -->
+      <button class="button button-block button-positive">
+        상품정보
+      </button>
+      <div class="list list1" ng-if="pageNum==1">
+        <div class="item" ng-click="buy('matching.one.church')">
+          1회 이용권
+          <div class="costInfo">
+            <span>3000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-click="buy('matching.week.church')">
+          일주일 이용권
+          <div class="costInfo">
+            <span>10,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-click="buy('matching.month.church')">
+          한 달 이용권
+          <div class="costInfo">
+            <span>20,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list list2" ng-if="pageNum==2">
+        <div class="item" ng-click="buy('matching.one.ministry')">
+          1회 이용권
+          <div class="costInfo">
+            <span>2000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-click="buy('matching.week.ministry')">
+          일주일 이용권
+          <div class="costInfo">
+            <span>5,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-click="buy('matching.month.ministry')">
+          한 달 이용권
+          <div class="costInfo">
+            <span>10,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list list3" ng-if="pageNum==3">
+        <div class="item" ng-click="buy('view.one.church')">
+          1회 이용권
+          <div class="costInfo">
+            <span>3000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-click="buy('view.week.church')">
+          일주일 이용권
+          <div class="costInfo">
+            <span>10,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-click="buy('view.month.church')">
+          한 달 이용권
+          <div class="costInfo">
+            <span>20,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list list4" ng-if="pageNum==4">
+        <div class="item" ng-click="buy('sum.week.church')">
+          일주일 이용권
+          <div class="costInfo">
+            <span>18,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-click="buy('sum.month.church')">
+          한달 이용권
+          <div class="costInfo">
+            <span>36,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list list5" ng-if="pageNum==5">
+        <div class="item" ng-click="buy('emergency.one.church')">
+          1회 이용권
+          <div class="costInfo">
+            <span>5,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list list6" ng-if="pageNum==6">
+        <div class="item" ng-click="buy('emergency.one.ministry')">
+          1회 이용권
+          <div class="costInfo">
+            <span>5,000</span>원
+            <div class="buy-btn">
+              구매
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

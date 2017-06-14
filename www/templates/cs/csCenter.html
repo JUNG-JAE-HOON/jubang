@@ -1,0 +1,295 @@
+<ion-view view-title="고객센터" ng-controller="csCtrl">
+  <ion-nav-bar class="jubang-nav-bar">
+    <ion-nav-buttons side="left">
+        <a class="btn button-clear custom-back-button" ui-sref="app.main">
+              <i class="ion-chevron-left"></i>
+        </a>
+    </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+          <a class="btn" ui-sref="csWrite" ng-show="icon">
+              <img src="img/cs-write.png" width="50%;" style="margin-top:.5em;" />
+          </a>
+      </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="cs-content">
+    <div class="find-gen-tabs">
+        <div class="tab-nav tabs" style="top:0px; background-color:white" ng-model="hoho">
+            <a class="tab-item tab-item-active" ng-click="hideIcon()">
+              <!-- ngIf: badge --><!-- ngIf: getIcon() -->
+              <span class="tab-title ng-binding">FAQ</span>
+            </a>
+            <a class="tab-item" style="" ng-click="showIcon()">
+              <!-- ngIf: badge --><!-- ngIf: getIcon() -->
+              <span class="tab-title ng-binding">Q&A</span>
+            </a>
+        </div>
+    </div>
+    <div class="cs-tab-wrap">
+      <div class="list-tab list-tab1">
+            <div class="list">
+              <div class="item question-wrap q1">
+                <img src="img/q.png" alt="" width="8%">
+                1. 주방이 무엇인가요?
+              </div>
+              <div class="item answer-wrap a1">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q2">
+                <img src="img/q.png" alt="" width="8%">
+                2. 주방이 무엇인가요?
+              </div>
+              <div class="item answer-wrap a2">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q3">
+                <img src="img/q.png" alt="" width="8%">
+                3. 주방은 무엇인가요?
+              </div>
+              <div class="item answer-wrap a3">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q4">
+                <img src="img/q.png" alt="" width="8%">
+                3. 주방이란것이 무엇인가요?
+              </div>
+              <div class="item answer-wrap a4">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q5">
+                <img src="img/q.png" alt="" width="8%">
+                3. 주방 뭔가요?
+              </div>
+              <div class="item answer-wrap a5">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  asdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlk
+                </div>
+              </div>
+              <div class="item question-wrap q1">
+                <img src="img/q.png" alt="" width="8%">
+                1. 주방이 무엇인가요?
+              </div>
+              <div class="item answer-wrap a1">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q2">
+                <img src="img/q.png" alt="" width="8%">
+                2. 주방이 무엇인가요?
+              </div>
+              <div class="item answer-wrap a2">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q3">
+                <img src="img/q.png" alt="" width="8%">
+                3. 주방은 무엇인가요?
+              </div>
+              <div class="item answer-wrap a3">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q4">
+                <img src="img/q.png" alt="" width="8%">
+                3. 주방이란것이 무엇인가요?
+              </div>
+              <div class="item answer-wrap a4">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q5">
+                <img src="img/q.png" alt="" width="8%">
+                3. 주방 뭔가요?
+              </div>
+              <div class="item answer-wrap a5">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  asdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlk
+                </div>
+              </div>
+              <div class="item question-wrap q1">
+                <img src="img/q.png" alt="" width="8%">
+                1. 주방이 무엇인가요?
+              </div>
+              <div class="item answer-wrap a1">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q2">
+                <img src="img/q.png" alt="" width="8%">
+                2. 주방이 무엇인가요?
+              </div>
+              <div class="item answer-wrap a2">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q3">
+                <img src="img/q.png" alt="" width="8%">
+                3. 주방은 무엇인가요?
+              </div>
+              <div class="item answer-wrap a3">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q4">
+                <img src="img/q.png" alt="" width="8%">
+                3. 주방이란것이 무엇인가요?
+              </div>
+              <div class="item answer-wrap a4">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.주님의 방이라는 뜻입니다 아멘.
+                </div>
+              </div>
+              <div class="item question-wrap q5">
+                <img src="img/q.png" alt="" width="8%">
+                3. 주방 뭔가요?
+              </div>
+              <div class="item answer-wrap a5">
+                <img src="img/a.png" alt="" width="8%">
+                <div class="answer">
+                  asdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlkasdlkajsdlkajsdlk
+                </div>
+              </div>
+            </div>
+
+      </div>
+      <div class="list-tab list-tab2">
+            <div class="qa-title">
+              Q&A 게시판에 대한 안내글입니다
+            </div>
+            <div class="list">
+              <div class="item" ui-sref="csView">
+                답변기다립니다.
+                <ul class="qna-ul">
+                  <li class="qna-li">
+                    <span>홍**</span>
+                    님
+                  </li>
+                  <li class="qna-li">2017.04.10</li>
+                </ul>
+              </div>
+              <div class="item" ui-sref="csView">
+                답변기다립니다.
+                <ul class="qna-ul">
+                  <li class="qna-li">
+                    <span>홍**</span>
+                    님
+                  </li>
+                  <li class="qna-li">2017.04.10</li>
+                </ul>
+              </div>
+              <div class="item" ui-sref="csView">
+                답변기다립니다.
+                <ul class="qna-ul">
+                  <li class="qna-li">
+                    <span>홍**</span>
+                    님
+                  </li>
+                  <li class="qna-li">2017.04.10</li>
+                </ul>
+              </div>
+              <div class="item" ui-sref="csView">
+                  답변기다립니다.
+                <ul class="qna-ul">
+                  <li class="qna-li">
+                    <span>홍**</span>
+                    님
+                  </li>
+                  <li class="qna-li">2017.04.10</li>
+                </ul>
+              </div>
+              <div class="item" ui-sref="csView">
+                답변기다립니다.
+                <ul class="qna-ul">
+                  <li class="qna-li">
+                    <span>홍**</span>
+                    님
+                  </li>
+                  <li class="qna-li">2017.04.10</li>
+                </ul>
+              </div>
+              <div class="item" ui-sref="csView">
+                  답변기다립니다.
+                <ul class="qna-ul">
+                  <li class="qna-li">
+                    <span>홍**</span>
+                    님
+                  </li>
+                  <li class="qna-li">2017.04.10</li>
+                </ul>
+              </div>
+              <div class="item" ui-sref="csView">
+                답변기다립니다.
+                <ul class="qna-ul">
+                  <li class="qna-li">
+                    <span>홍**</span>
+                    님
+                  </li>
+                  <li class="qna-li">2017.04.10</li>
+                </ul>
+              </div>
+              <div class="item" ui-sref="csView">
+                  답변기다립니다.
+                <ul class="qna-ul">
+                  <li class="qna-li">
+                    <span>홍**</span>
+                    님
+                  </li>
+                  <li class="qna-li">2017.04.10</li>
+                </ul>
+              </div>
+            </div>
+            <div class="csBtn-wrap">
+              <div class="btn-wrap">
+                <button class="button button-block default-btn2">
+                  더보기
+                </button>
+              </div>
+            </div>
+            <div class="csInfo-wrap">
+              <ul class="csInfo-ul">
+                <li>
+                  <span class="cs-info1">고객센터</span>
+                  <span class="cs-info2">02-2138-7365</span>
+                </li>
+                <li>
+                  <span class="cs-info1">운영시간</span>
+                  <span class="cs-info2">평일 오전 9시~6시 (주말, 공휴일 휴무)</span>
+                </li>
+                <li>
+                  <span class="cs-info1">고객센터</span>
+                  <span class="cs-info2">il-bang9192@hanmail.net</span>
+                </li>
+              </ul>
+            </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

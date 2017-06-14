@@ -1,0 +1,38 @@
+<ion-view view-title="주방" ng-controller='sideMainCtrl'>
+  <ion-nav-bar class="jubang-nav-bar" align-title="center">
+    <ion-nav-buttons side="left" class="left-btn">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="content main-content" overflow-scroll="true">
+    <div class="main-search">
+      <search-bar></search-bar>
+    </div>
+    <div class="main-slide">
+      <default-slide></default-slide>
+    </div>
+    <div class="main-two-btn">
+      <div class="main">
+        <two-btn ng-repeat="btnInfo in btnInfos"></two-btn>
+      </div>
+    </div>
+    <div class="main-tabs">
+        <ion-tabs class="tabs-positive tabs-icon-top">
+          <ion-tab id="clickTab1" title="찬양사역자">
+            <ion-nav-view>
+              <main-tab1></main-tab1>
+            </ion-nav-view>
+          </ion-tab>
+          <ion-tab title="교회공고">
+            <ion-nav-view>
+              <main-tab2></main-tab2>
+            </ion-nav-view>
+          </ion-tab>
+      </ion-tabs>
+    </div>
+    <!-- <ion-list> -->
+
+    <!-- </ion-list> -->
+
+  </ion-content>
+</ion-view>

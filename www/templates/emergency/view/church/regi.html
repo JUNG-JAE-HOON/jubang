@@ -1,0 +1,22 @@
+<ion-view view-title="내 채용 공고" cache-view="false">
+    <ion-content class="erc-wrap" ng-controller="ecrCtrl">
+      <div class="intro">
+          <p class="main-color" ng-click="popover.show()"><b class="main-color">긴급구인</b>이란?</p>
+      </div>
+        <div class="regi-exist">
+            <div class="regi-list-wrap" ng-show="not == false">
+
+                <div class="ment">
+                  긴급구인 기능을 사용하시려면<br>
+                  기존에 작성한 채용 공고를 불러오기 하거나<br>
+                  새로 작성해 주세요<br>
+                </div>
+            </div>
+            <div class="padding-wrap">
+                <div class="church-regi-title" ng-bind-html="emptyCon" ng-show="not == true"></div>
+                <default-btn1 ng-repeat="button in button11" ui-sref="emergencyListChurch"></default-btn1>
+                <default-btn2 ng-repeat="button in button22" ng-click="churchWriteCheck('Y')"></default-btn2>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

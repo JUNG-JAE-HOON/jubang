@@ -1,0 +1,117 @@
+<ion-modal-view cache-view="false">
+    <ion-nav-bar class="jubang-nav-bar" align-title="center">
+        <ion-nav-buttons side="left">
+            <a class="btn button-clear custom-back-button left-btn" ng-click="closeModal()">
+                <i class="ion-chevron-left"></i>
+            </a>
+        </ion-nav-buttons>
+        <h3 align="center" style="center">glglgl</h3>
+    </ion-nav-bar>
+    <ion-content class="detail-back">
+        <div class="video-wrap">
+            <iframe width="400" height="220" ng-src="{{ employ.videoPath }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="detail-cont">
+            <div class="title1">
+                <h4 class="left">이미지</h4>
+            </div>
+            <div class="detail-slide-wrap">
+                <div class="thumbnail-list" id="imageList"></div>
+            </div>
+        </div>
+        <div class="list detail-cont">
+            <div class="item item-thumbnail-left item-thumb-wrap">
+                <img class="circle" ng-src="{{ employ.profile }}" />
+                <div class="thumblist-date">
+                    <span class="date">{{ employ.date }} {{ employ.time }}</span>
+                    <div class="rateYo" id="rateYoSmall"></div>
+                </div>
+                <p class="thumblist-title">{{ employ.title }}</p>
+                <div class="thumbnailist-cont">{{ employ.content }}</div>
+            </div>
+        </div>
+        <div class="detail-cont">
+            <div class="title1">
+                <h4 class="left">상세 정보</h4>
+            </div>
+            <div class="detail-info1-wrap">
+                <ul class="detail-info-ul">
+                    <li class="detail-info-li">
+                        <p class="info-left">성함</p>
+                        <p class="info-right">{{ employ.name }}</p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left">위치</p>
+                        <p class="info-right">{{ employ.address }}</p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left">일시</p>
+                        <p class="info-right">{{ employ.eventDate }}</p>
+                    </li>
+                    <li class="detail-info-li">
+                        <p class="info-left">금액</p>
+                        <p class="info-right">{{ employ.pay }}원</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="detail-cont">
+            <div class="title1">
+                <h4 class="left">평가하기</h4>
+            </div>
+            <div class="give-star">
+                <div class="rateYo-give-star" id="rateYoBig"></div>
+                <div class="submit" ng-click="giveStar(employ.no)">점수주기</div>
+            </div>
+        </div>
+        <div class="detail-cont">
+            <div class="detail-info2-wrap">
+                <div class="detail-review-input">
+                    <div class="input-padding">
+                        <div class="list">
+                            <label class="item item-input item-floating-label default-input1">
+                                <input type="text" ng-model="comment.content" placeholder="댓글을 입력해주세요." />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-review-btn">
+                    <div class="btn-wrap">
+                        <button class="button button-block button-positive" ng-click="addComment(employ.no)">입력</button>
+                    </div>
+                </div>
+                <ul class="detail-info-ul">
+                    <li class="detail-info-li" ng-repeat="comment in employ.commentList" item="employ.commentList">
+                        <p class="info-left">{{ comment.id }}</p>
+                        <p class="info-right">
+                            {{ comment.content }}
+                            <span style="padding: 0 5px; color: #bbb;">{{ comment.date }}</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="more" ng-click="commentMore(employ.no)" ng-show="commentMoreView == true">
+                <span>댓글 더보기</span>
+            </div>
+        </div>
+        <!-- 추가함 나중에 바꿔주세요. -->
+        <!-- 추가함 나중에 바꿔주세요. -->
+        <div>
+          <label class="item item-select select-local">
+            <select class="" name="asd" ng-change="changeResumeTitle()" ng-model="employView.resume_data_no" ng-options="o.resume_data_no as o.title for o in selboxData.resume_list">
+            </select>
+          </label>
+          <input type="button" ng-click="apply()" value="지원하기" />
+        </div>
+        <!-- 추가함 나중에 바꿔주세요. -->
+        <!-- 추가함 나중에 바꿔주세요. -->
+          <div class="detail-cont">
+
+            <sns-bar></sns-bar>
+            <div class="banner">
+                <img src="img/main-bot-ban.png" width="100%" />
+            </div>
+            <footer></footer>
+        </div>
+    </ion-content>
+</ion-modal-view>

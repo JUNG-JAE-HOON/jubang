@@ -1,0 +1,63 @@
+<ion-view view-title="내 이력서 보기" cache-view="false" ng-controller="generalRegi">
+  <ion-nav-buttons side="left">
+        <a class="btn button-clear custom-back-button" ng-click="backBtn()">
+              <i class="ion-chevron-left"></i>
+        </a>
+</ion-nav-buttons>
+    <ion-content class="general-regi">
+        <div class="regi-exist">
+            <div class="regi-tabs">
+                <div class="find-gen-tabs">
+                    <div class="tab-nav tabs" style="top:0px; background-color:white">
+                        <a class="tab-item tab-item-active" id="left" ng-click="changeResume('ing')">
+                            <span class="tab-title ng-binding">진행 중인 이력서</span>
+                        </a>
+                        <a class="tab-item" id="right" ng-click="changeResume('past')">
+                            <span class="tab-title ng-binding">지난 이력서</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="regi-list-wrap">
+                <div class="count">
+                    <p>전체<b class="total">{{ resumeCnt }}</b>건 (최대<b class="max">10건</b>)</p>
+                </div>
+                <div class="list" ng-repeat="resume in resumeList" item="resumeList">
+                    <div class="item item-thumbnail-left item-thumb-wrap">
+                        <img class="circle" ng-src="http://il-bang.com/jubang_ajax/imageProfile/{{ resume.profile }}" />
+                        <div class="thumblist-date">
+                            <span class="date">{{ resume.date }}</span>
+                            <span class="minute">{{ resume.time }}</span>
+                            <div class="rateYo" id="rate{{ $index }}"></div>
+                        </div>
+                        <p class="thumblist-title">{{ resume.title }}</p>
+                        <div class="thumbnailist-cont">{{ resume.content }}</div>
+                        <div class="subInfo">
+                            <span class="price">₩ {{ resume.pay }}</span>
+                        </div>
+                        <div class="regi-button-wrap">
+                            <div class="three-btn">
+                                <ul class="three-btn-ul">
+                                    <li class="three-btn-li" ui-sref="detailGeneral({ no: resume.no })">
+                                        <img src="img/regi-btn1.png" width="15%" />보기
+                                    </li>
+                                    <li class="three-btn-li" ng-click="modifyCheck(resume.no)">
+                                        <img src="img/regi-btn2.png" width="15%" />이력서 수정
+                                    </li>
+                                    <li class="three-btn-li" ng-click="resumeDelete(resume.no)">
+                                        <img src="img/regi-btn3.png" width="10%" />삭제
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-wrap">
+                <div class="general-regi-title" ng-bind-html="emptyCon" ng-show="resumeList == null"></div>
+                <default-btn1 class="general-btn-wrap" ng-repeat="button in button11" ng-show="writeBtn == true" ng-click="writeCheck('N')"></default-btn1>
+                <default-btn2 class="general-btn-wrap" ng-repeat="button in button22" ng-show="writeBtn == true" ng-click="writeCheck('Y')"></default-btn2>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

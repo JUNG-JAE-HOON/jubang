@@ -1,0 +1,124 @@
+<ion-view view-title="이력서 작성">
+  <ion-content ng-controller="generalWriteCtrl" class="has-header padding-wrap write-form-wrap">
+    <form class="" method="post">
+      <div class="general-write-input">
+        <div class="input-padding">
+          <div class="list">
+            <label class="item item-input item-floating-label default-input1">
+              <span class="input-label">{{item.inputTitle}}</span>
+              <input type="text" ng-model="generalForm.title" placeholder="이력서 제목을 입력해주세요.">
+            </label>
+          </div>
+          <div class="list">
+            <label class="item item-input item-floating-label default-input1">
+              <span class="input-label">{{item.inputTitle}}</span>
+              <input type="text" ng-model="generalForm.name" placeholder="성함을 입력해주세요.">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="title1">
+        <h4 class="left">위치</h4>
+      </div>
+      <div class="list select-form select-local">
+        <label class="item item-select">
+          <select class="" name="asd" ng-change="getArea2ndList()" ng-model="generalForm.area_1st_no" ng-options="o.no as o.list_name for o in selboxData.area_1st">
+          </select>
+        </label>
+        <label class="item item-select select-local">
+          <select class="" name="asd" ng-model="generalForm.area_2nd_no" ng-options="o.no as o.list_name for o in selboxData.area_2nd">
+          </select>
+        </label>
+      </div>
+      <div class="input-padding">
+        <div class="list">
+          <label class="item item-input item-floating-label default-input1">
+            <span class="input-label">{{item.inputTitle}}</span>
+            <input type="text" ng-model="generalForm.address" placeholder="상세주소를 입력해 주세요">
+          </label>
+        </div>
+      </div>
+      <!--  추가할 곳 - 시작 -->
+      <div class="title1">
+        <h4 class="left">행사 정보 입력하기</h4>
+      </div>
+      <!--
+      <div class="list">
+        <label class="item item-input item-floating-label default-input1">
+          <span class="input-label">{{item.inputTitle}}</span>
+          <input type="text" ng-model="generalForm.event_nm" placeholder="행사명을 입력해주세요">
+        </label>
+      </div>
+    -->
+      <div class="list select-form select-date">
+        <label class="item item-select">
+          <select class="" ng-model="generalForm.start_date" name="asd" ng-options="data as data for data in selboxData.start_date">
+          </select>
+        </label>
+        <label class="wave"> ~ </label>
+        <label class="item item-select select-local">
+          <select class="" ng-model="generalForm.end_date" name="asd" ng-options="data as data for data in selboxData.end_date">
+          </select>
+        </label>
+      </div>
+      <div class="title1">
+          <h4 class="left">행사 시간</h4>
+      </div>
+      <div class="list select-form select-date">
+          <label class="item item-select">
+              <select ng-model="generalForm.start_time" ng-options="data as data for data in selboxData.start_time"></select>
+          </label>
+          <label class="wave"> ~ </label>
+          <label class="item item-select select-local">
+              <select ng-model="generalForm.end_time" ng-options="data as data for data in selboxData.end_time"></select>
+          </label>
+      </div>
+
+      <!--  추가할 곳 - 끝-->
+      <div class="title1">
+        <h4 class="left">금액</h4>
+      </div>
+      <div class="list">
+        <label class="item item-input item-floating-label default-input1">
+          <span class="input-label">{{item.inputTitle}}</span>
+          <input type="text" ng-model="generalForm.pay" placeholder="금액을 입력해 주세요">
+        </label>
+      </div>
+      <div class="title1">
+        <h4 class="left">동영상</h4>
+      </div>
+      <div class="list">
+        <label class="item item-input item-floating-label default-input1">
+          <span class="input-label">{{item.inputTitle}}</span>
+          <input type="text" ng-model="generalForm.video_url" placeholder="동영상 URL 링크를 입력해 주세요">
+        </label>
+      </div>
+      <div class="title1">
+        <h4 class="left">사진 첨부</h4>
+      </div>
+      <div class="list thumbnail">
+        <img class="add-img" src="http://il-bang.com/jubang_ajax/imageGujik/{{image}}" width="32.4%" ng-repeat="image in generalForm.imageList">
+        <span class="add-photo" ng-click="getPicture()">
+          <img src="img/plus.png" alt="" width="40%">
+        </span>
+      </div>
+      <div class="text-area">
+        <input type="text" ng-model="generalForm.content" placeholder="내용을 입력해 주세요.">
+        <!-- <default-text-area ng-model="churchForm.content"></default-text-area> -->
+
+      </div>
+      <li class="item item-checkbox">
+       '이력서 자동매칭1회 이용권'을 이용합니다.
+       <label class="checkbox">
+       <input type="checkbox" ng-model="generalForm.TMPmatchingOneYn" ng-change="changeMatchingOneYn()">
+       </label>
+     </li>
+      <div class="padding submit-btn-wrap">
+        <button ng-click="insertForm()" class="button button-block button-positive" >
+          이력서 작성완료
+        </button>
+      </div>
+
+    </form>
+  </ion-content>
+</ion-view>

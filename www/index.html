@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>주방</title>
+        <link rel="manifest" href="manifest.json">
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/jquery.rateyo.min.css" rel="stylesheet">
+        <link href="css/slick.css" rel="stylesheet">
+        <link href="css/slick-theme.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400" rel="stylesheet" type="text/css">
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="cordova.js"></script>
+        <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+        <!-- your app's js -->
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directive.js"></script>
+        <script src="js/backBtn.js"></script>
+        <script src="js/cs/cs.js"></script>
+        <!-- 추가한 컨트롤러 -->
+        <script src="js/ref.js"></script>
+        <script src="js/service.js"></script>
+        <script src="js/slide.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/jquery.rateyo.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/main/sideMenu.js"></script>
+        <script src="js/main/sideHome.js"></script>
+        <script src="js/tutorial/tutorial.js"></script>
+        <script src="js/member/memberKind.js"></script>
+        <script src="js/member/login.js"></script>
+        <script src="js/member/form/signUpBasic.js"></script>
+        <script src="js/buttons/fabDirective.js"></script>
+        <script src="js/buttons/fab.js"></script>
+        <script src="js/church/view/regi.js"></script>
+        <script src="js/general/view/regi.js"></script>
+        <script src="js/church/form/writeForm.js"></script>
+        <script src="js/general/form/writeForm.js"></script>
+        <script src="js/sns/view/snsView.js"></script>
+        <script src="js/general/list/findGenTab.js"></script>
+        <script src="js/church/list/findChurchTab.js"></script>
+        <script src="js/general/view/detailPage.js"></script>
+        <script src="js/member/find.js"></script>
+        <script src="js/views/list/message.js"></script>
+        <script src="js/forms/modifyPage.js"></script>
+        <script src="js/church/view/detailPage.js"></script>
+        <script src="js/church/view/matching.js"></script>
+        <script src="js/general/view/matching.js"></script>
+        <script src="js/inApp/inApp.js"></script>
+        <script src="js/church/form/modifyForm.js"></script>
+        <script src="js/itemShop/view/itemShop.js"></script>
+        <script src="js/itemShop/view/itemShopView.js"></script>
+        <script src="js/itemShop/view/itemSelect.js"></script>
+        <script src="js/notice/readDetail.js"></script>
+        <script src="js/emergency/church/regi.js"></script>
+        <script src="js/emergency/general/regi.js"></script>
+        <script src="js/emergency/church/list.js"></script>
+        <script src="js/emergency/general/list.js"></script>
+        <script src="js/general/form/modifyForm.js"></script>
+        <script src="js/notice/notice.js"></script>
+        <script src="js/intro/jubangIntro.js"></script>
+    </head>
+    <body ng-app="jubang">
+
+            <ion-nav-bar class="jubang-nav-bar">
+                <ion-nav-back-button ng-controller="sideMainCtrl" ng-click="goBack()"><</ion-nav-back-button>
+              </ion-nav-buttons>
+               <ion-nav-buttons side="right">
+                  <a class="btn" ui-sref="message">
+                      <img src="img/bell.png" width="70%;" style="margin-top:.3em;" />
+                  </a>
+              </ion-nav-buttons>
+                <!-- <ion-nav-back-button class="button-icon button-clear ion-ios7-arrow-left"></ion-nav-back-button> -->
+            </ion-nav-bar>
+            <ion-nav-view>
+            </ion-nav-view>
+    </body>
+</html>

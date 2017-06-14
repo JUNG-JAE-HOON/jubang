@@ -1,0 +1,51 @@
+<ion-view view-title="내 매칭완료 리스트" cache-view="false">
+    <ion-content class="matching-fin" ng-controller="churchRegi">
+        <div class="regi-exist">
+            <!-- <div class="regi-tabs">
+                <div class="find-gen-tabs">
+                    <div class="tab-nav tabs" style="top:0px; background-color:white">
+                        <a class="tab-item tab-item-active" id="left" ng-click="employCheck('ing')">
+                            <span class="tab-title ng-binding">현재 진행매칭리스트</span>
+                        </a>
+                        <a class="tab-item" id="right" ng-click="employCheck('past')">
+                            <span class="tab-title ng-binding">지난 매칭리스트</span>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+            <div class="regi-list-wrap" ng-show="not == false">
+                <div class="count">
+                    <p>전체 <b class="total">{{ totalList }}</b>건</p>
+                </div>
+                <div class="list" ng-repeat="employ in employList" item="employList">
+                    <div class="item item-thumbnail-left item-thumb-wrap">
+                        <img class="circle" src="{{ employ.profile }}" />
+                        <div class="thumblist-date">
+                            <span class="date">{{ employ.date }}</span>
+                            <span class="minute">{{ employ.time }}</span>
+                            <div class="rateYo" id="rate{{ employ.ratingNo }}"></div>
+                        </div>
+                        <p class="thumblist-title">{{ employ.title }}</p>
+                        <div class="thumbnailist-cont">{{ employ.content }}</div>
+                        <div class="subInfo">
+                            <span class="price">₩ {{ employ.pay }}</span>
+                        </div>
+                        <div class="matching-button-wrap">
+                          <div class="two-btn">
+                            <ul class="two-btn-ul">
+                              <li class="two-btn-li" ui-sref="detailGeneral">
+                                재신청하기
+                              </li>
+                              <li class="two-btn-li">
+                                삭제하기
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

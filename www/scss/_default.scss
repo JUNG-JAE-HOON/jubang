@@ -1,0 +1,458 @@
+.title1{
+  overflow: hidden;
+  padding:1em;
+  background-color: white;
+  // margin-top:1em;
+  // height: 2.9em;
+  .left{
+    float: left;
+    margin:.1em 0 0;
+    font-size: 14px;
+  }
+  .right{
+    float: right;
+  }
+}
+// sns로고바
+
+.footer-wrap{
+  background-color: $dark-grey;
+  .foot-link-wrap{
+    text-align: center;
+    .footer-ul{
+      display: inline-block;
+      margin:1em 0;
+      .footer-link{
+        font-size: 14px;
+        float: left;
+        &:nth-child(2){
+          margin:0 1em;
+        }
+        &:nth-child(4){
+          margin:0 1em;
+        }
+      }
+    }
+  }
+  .lions-adress{
+    text-align: center;
+    padding:0 1em 3em;
+    margin-bottom: 0 !important;
+  }
+}
+.main-footer{
+  margin-top: -.3em;
+}
+.lions-adress{
+  font-size: 8px;
+}
+.login-content{
+  padding:1em;
+}
+// 회원가입 및 로그인은 member클래스 아래쪽으로
+.member{
+  overflow: hidden;
+  padding:0 2em;
+  .memkind-title{
+    color:$main-color;
+    text-align: center;
+    margin:3em 0;
+  }
+  .mem-kind-wrap{
+    padding:0 3em;
+    .mem-kind-general{
+      border-bottom:2px solid $grey;
+      .padding{
+        padding:1em 0 1em;
+      }
+      .btn-wrap{
+        margin-bottom: 3em;
+      }
+    }
+    .mem-kind-company{
+      margin-top:1em;
+      .padding{
+        padding:1em 0 1em;
+      }
+    }
+  }
+  .basic-wrap1{
+    margin-top:5em;
+    text-align: center;
+    .goLogin{
+      font-size: 14px;
+      // float: right;
+      // color:$dark-grey;
+    }
+    padding:0 1em;
+    .basic-input-wrap{
+      margin-bottom: 3em;
+      .basic-input-form{
+        overflow: hidden;
+        .default-input1{
+          background-color: white !important;
+          .input-label{
+            text-align: left;
+          }
+        }
+      }
+
+    }
+    .next-btn{
+      margin-top: 12em;
+    }
+  }
+  .basic-wrap2{
+    display: none;
+    overflow: hidden;
+    .round-thumb{
+      margin:3em 0 2em;
+    }
+  }
+  .login-bot-wrap{
+    overflow: hidden;
+    .auto-login{
+      width: 50%;
+      float: left;
+      .item-checkbox{
+        font-size: 12px;
+        border:none !important;
+        padding-left: 50px;
+        .checkbox-icon{
+          width: 20px;
+          height: 20px;
+        }
+        .checkbox{
+          margin-top: -18px;
+        }
+      }
+    }
+    .goLogin{
+      float: right;
+      padding-top:1em;
+      font-size: 12px;
+    }
+  }
+  .not-yet{
+    text-align: center;
+    margin-top:1em;
+  }
+  .login-btn{
+    .padding{padding:0 0 0 0}
+  }
+  .login-inputs{
+    .list-inset{
+      margin:2em 0;
+    }
+  }
+  .coment{
+    font-size: 12px;
+    // margin-top: 5em;
+    display: inline-block;
+  }
+  .general-txt,.company-txt{
+      padding:3em 0 2em 6.5em;
+      position:relative;
+      img{
+        position:absolute;
+        left:6em;
+        width: 2em;
+        vertical-align: middle;
+      }
+      .title{
+        font-size:13px;
+        font-weight: bold;
+      }
+      .sub-title{
+        font-size:12px;
+        vertical-align: middle;
+      }
+  }
+  .general-txt{
+    img{
+      top: 2.6em;
+      left: 3em;
+    }
+  }
+  .company-txt{
+    img{
+      width: 2.2em;
+      top:3.1em;
+      left:3em;
+    }
+  }
+}
+.sns-bar{
+  text-align: center;
+  overflow: hidden;
+  width:100%;
+  .snsBar-ul{
+    display:inline-block;
+    .sns-logo{
+      border-radius:5em;
+      overflow: hidden;
+      float: left;
+      width:4em;
+      height: 3.2em;
+      &:nth-child(2){
+        margin:0 0.5em 0 1em;
+      }
+      &:nth-child(3){
+        margin:0 1em 0 0.5em;
+      }
+    }
+  }
+
+}
+
+.general-step1{
+  @extend.basic-wrap2;
+}
+.church-step1{
+  @extend.basic-wrap2;
+}
+.general-step-fin{
+  @extend.basic-wrap2;
+}
+.church-step-fin{
+  @extend.basic-wrap2;
+}
+.add-file-wrap{
+  min-height: 10em;
+  text-align: center;
+  margin:2em 0;
+  // margin-top: 3em;
+}
+.general-step-tlt{
+  color:#363636 !important;
+}
+.fin-message{
+  @extend.tc;
+  padding:13em 0;
+  color:$main-color;
+  b{
+    color:$main-color;
+  }
+}
+.input-pop-text{
+  color:$font-color;
+  font-size:14px;
+  top:5px;
+  opacity: .7;
+}
+.church-regi{
+  background-color: $grey;
+}
+.church-regi-title{
+  color:$dark-dark-grey;
+  margin:13em 0;
+  @extend.tc;
+}
+.general-regi{
+  @extend.church-regi;
+}
+.general-regi-title{
+  @extend.church-regi-title;
+}
+.start-btn{
+  position: absolute;
+  bottom:5em;
+  width: 80%;
+  left:10%;
+  button{
+    border:2px solid white !important;
+  }
+}
+
+.submit-btn-wrap{
+  margin:2em 0;
+}
+.detail-back{
+  background-color: $grey;
+  .detail-cont{
+    &:last-child{
+      margin-bottom: 0 !important;
+    }
+  }
+}
+.banner{
+  height: 57px;
+}
+.backdrop{
+  transition: 3.1s opacity linear !important;
+}
+.pop-nav-bar{
+  background-color: $main-color;
+  margin:0 0 0 0;
+  border-radius:0 !important;
+  .title{
+    font-size: 14px;
+    span{
+      color:white !important;
+    }
+  }
+}
+.resume-count{
+  text-align: center;
+  font-size:12px;
+  margin:2em 0 0;
+  span{
+    color:$main-color !important;
+  }
+}
+.modify-wrap{
+  padding:2em 2em 0;
+  .info-left{
+    color:black !important;
+    width:25% !important;
+  }
+  .basic-input-wrap{
+    .input-padding{
+      margin:1.5em 0
+    }
+  }
+  .btn-wrap{
+    padding:0 1em 1em;
+    margin-bottom:3em;
+  }
+}
+.cs-content{
+  background-color: $grey;
+}
+.matching-view{
+  .list-tab2{
+    position:absolute;
+    top:48px;
+  }
+}
+.item-select-wrap{
+  .ment{
+    text-align: center;
+    font-size: 16px;
+    color:grey;
+    padding:5em 0 4em;
+    .main-color{
+      color:$main-color !important;
+    }
+    p{
+      font-size: 12px;
+      line-height: 1em;
+      margin-top: 2.5em;
+    }
+  }
+  .button{
+    border-radius:0 !important;
+    background-color: $dark;
+    text-align: left;
+    padding: 0 2em;
+  }
+  .list{
+    padding:1em 2em;
+    background-color: white;
+    .item{
+      border-left:none !important;
+      border-right:none !important;
+      font-size:14px;
+      padding: 16px;
+      &:first-child{
+        border-top:none;
+      }
+      &:last-child{
+        border-bottom:none;
+      }
+    }
+  }
+  .costInfo{
+    float: right;
+    color:$main-color;
+    display: inline-block;
+    span{
+      color:$main-color;
+    }
+    .buy-btn{
+      background-color: $main-color;
+      display: inline-block;
+      color:white;
+      font-size: 10px !important;
+      border-radius:20px;
+      padding:0em 1em;
+    }
+  }
+}
+.itemShop-list-wrap{
+  @extend.item-select-wrap;
+  .useInfo{
+    @extend.costInfo;
+  }
+  .item{
+      font-size: 12px !important;
+  }
+}
+.emergency-wrap{
+  background-color: $grey;
+  .rotation{
+    text-align:center;
+    padding:8em 0 4em;
+  }
+  .text-box{
+    text-align: center;
+      .main-color{
+        color:$main-color;
+      }
+      .wait-msg{
+        font-size: 10px;
+        line-height: 10px;
+        &:first-child{
+          margin-bottom: 0 !important;
+        }
+      }
+  }
+  .info-box{
+    width:90% !important;
+    margin:2em auto 0;
+    @extend.detail-info1-wrap;
+    .detail-info-ul{
+      padding:1em;
+      border:1px solid $dark-grey;
+      .info-left{
+        width:23%;
+      }
+      .info-right{
+        color:$main-color;
+      }
+    }
+  }
+  .button{
+    border-radius:0 !important;
+    width:90%;
+    margin:3em auto 0;
+  }
+}
+.erc-wrap{
+  .intro{
+    overflow: hidden;
+
+    margin:1em 0 0 1em;
+    border-bottom:1px solid $main-color;
+    display: inline-block;
+    p{
+      margin:0;
+    }
+  }
+
+}
+.ytp-title-text{
+  a{
+    font-size: 10px !important;
+  }
+}
+.login-link-wrap{
+  margin-bottom: 5em;
+}
+.jubang-logo{
+  text-align: center;
+  margin-bottom: 0;
+  img{
+    margin: 2.5em 0;
+  }
+}

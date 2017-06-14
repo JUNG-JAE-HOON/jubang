@@ -1,0 +1,23 @@
+.checkbox2{
+  border-radius: $default-radius !important;
+}
+.checkbox input:checked:before, input:checked + .checkbox-icon:before {
+  border-width: 1px;
+}
+.crc-check .checkbox input:checked:before, .crc-check .checkbox input:checked + .checkbox-icon:before {
+  background: #ddd;
+  border-color: #ddd;
+}
+.crc-check .checkbox-icon:after {
+  border-color: #fff !important;
+}
+.rtg-check .checkbox input:checked:before, .rtg-check .checkbox input:checked + .checkbox-icon:before {
+  background: #fefefe;
+  border-color: #ddd;
+}
+.rtg-check .checkbox-icon:before {
+  border-radius:5px;
+}
+.rtg-check .checkbox-icon:after {
+  border-color: $main-color !important;
+}
